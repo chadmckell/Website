@@ -1,0 +1,387 @@
+<!--
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Modified by Chad McKell
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Effects</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="images/fairy2.jpg">
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+  
+  <style>
+    a {
+      text-decoration: none;
+      color: rgb(61, 68, 200); 
+    } 
+    </style>
+    
+</head>
+<body>
+
+
+
+  <header class="header">
+    <a href="index" class="logo">CHAD MCKELL</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="research">Research</a></li>
+      <li><a href="publications">Publications</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="teaching">Teaching</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </header>
+  
+  
+  <!-- <header>
+    <div class="nav">
+        
+    <a id="menu-icon"></a>
+        
+      <ul>
+        <li><a href="index">Home</a></li>
+        <li><a href="research">Research</a></li>
+        <li><a href="publications">Publications</a></li>
+        <li><a href="teaching">Teaching</a></li>
+        <li><a href="about">About</a></li>
+      </ul>
+      
+    </div>
+  </header> -->
+
+  <div class="banner">
+	  <img style="width:100%;" id="image" src="images/amp.jpg">
+  </div>
+
+  <div class="section">
+    <div class="container">
+        <br>
+        <h3><b>Digital Audio Effects</b></h3>
+
+        <h5><b>Analog Circuit Effects</b></h5>
+
+        <h6><b><i>Moog Ladder Filter</i></b></h6>
+
+          <p> 
+            <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Designed by Robert Moog in 1966, the Moog Voltage-Controlled Filter (VCF)&mdash;or Moog ladder  
+            filter&mdash;is a key element of the Moog synthesizer sound and a classic piece of electronic music history. 
+            In addition to its popularity today, the filter found its place on a number of famous records from the 1970s 
+            and 80s, including Kraftwerk's <i>The Man Machine</i>, Bob Marley's <i>Catch a Fire</i>, and Michael Jackson's 
+            <i>Thriller</i>, to name a few.  
+            
+            <br> <br>
+
+            The Moog VCF is a set of four low-pass filters connected by 10 transistors. I implemented a linear model 
+            of the circuit using the state-space modeling technique. The method leads to a system of differential 
+            equations that I solved using three different approaches: forward, backward, and trapezoidal integration. 
+            The C++ <a href="https://github.com/chadmckell/MoogVCFTrap" target="_blank"><b>code</b></a> for the trapezoidal  
+            integration is available to download on my GitHub page. The page also includes instructions for 
+            compiling the source code and running the VST plugin in a DAW.
+          </font></div>
+        <br> 
+        <table>
+          <tr>
+            <td>Dry Synth</td>
+            <td>
+              <audio controls>
+                <source src="audio/moog_dry.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Filtered Synth</td>
+            <td>
+              <audio controls>
+                <source src="audio/moog_vcf.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+
+        <!--<img class="u-max-full-width" src="images/moog_synth.jpg" alt="Moog Synth" width="420">-->
+      </p>
+      <!-- <hr> -->
+
+
+      <h6><b><i>Vacuum Tube Distortion</i></b></h6>
+        <!-- <h5><b>Vacuum Tube Distortion</b></h5> -->
+        <p> 
+          <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Vacuum tube distortion is a vintage audio effect found in many old music amplifiers, especially guitar 
+            amplifiers. One well-known guitar amplifier that produces this type of distortion is the Fender Bassman (shown at
+            right). The effect is caused by a valve-like clipping that adds additional harmonics to the original input 
+            audio. 
+            
+            <br> <br>
+            
+            I modeled the valve-like clipping using an approach based on the work of R. Bendiksen. The main equation of the 
+            model takes the form 
+            
+            $$y = {x - Q \over 1 - exp(-D(x-Q))} + {Q \over 1 - exp(DQ)},$$
+            
+            where \(x \) is the original input audio, \(y \) is the distorted output audio, \(Q \) is a parameter that 
+            determines the linearity of the clipping function, and \(D \) defines the harshness of the distortion.
+          </font></div>
+
+      <br> 
+        <table>
+          <tr>
+            <td>Dry Guitar</td>
+            <td>
+              <audio controls>
+                <source src="audio/guitar_dry.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Distorted Guitar</td> 
+            <td>
+              <audio controls>
+                <source src="audio/guitar_tube.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+        <!--<img class="u-max-full-width" src="images/vacuum_tube.jpg" alt="Moog Synth" width="420">-->
+
+      </p>
+      <br>
+
+      <hr>
+
+        <!-- <p>
+          <div class="underline">
+            <font size="5"></font>
+          </div>
+          </p> -->
+
+          
+    <!-- <h5><b>Data Sonification Effects</b></h5> -->
+    <h5><b>Fluid Sonification Effects</b></h5>
+    <!-- <h6><b><i>Fluid Sonification</i></b></h6> -->
+      <!-- <h5><b>Stochastic Sonification</b></h5> -->
+      <p> 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Inspired by Iannis Xenakis' 1956 work <i>Pithoprakta</i>, I used a 
+          modern laser trapping setup to track Brownian particles and sonify their motion. I built the optics setup as part of my master's 
+          <a href="https://wakespace.lib.wfu.edu/handle/10339/57431" target="_blank"><b>thesis</b></a> in Physics at Wake Forest University in Winston-Salem, 
+          North Carolina. I sonified the position data of single, optically-trapped Brownian microspheres using Pure Data and Ableton 
+          Live. Each radial displacement of the sphere mapped to an audible pitch. 
+
+          <!-- .... optically-trapped Brownian microspheres (like the one shown below)  -->
+
+          <br><br>
+          
+          I used three different mapping schemes&mdash;equal-area, biased, and probability mapping. In each scheme, the 
+          centermost subregion of the mapping region corresponded to a single pure tone. In equal-area mapping, the
+          note increased along a particular musical scale as the particle moved out radially into different equal-area 
+          subregions. In biased mapping, the centermost subregion area was enlarged relative to the other subregions. In 
+          probability mapping, the note had a 50-50 percent probability of increasing by some integer number of MIDI note 
+          numbers or decreasing by some other integer number of MIDI note numbers each time the particle entered a new 
+          subregion. I wrote a conference <a href="/pdf/icmc_2016.pdf" target="_blank"><b>paper</b></a> that provides more 
+          details on the project. I also made a couple of videos 
+          (<a href="https://www.youtube.com/watch?v=XY0IdksIbLQ" target="_blank"><b>here</b></a> 
+          and <a href="https://www.youtube.com/watch?v=PYP_Mi7jbq0" target="_blank"><b>here</b></a>) 
+          that synchronize the sounds to the actual experimental motion.
+      </font></div>
+      <br>
+      <table>
+        <tr>
+          <td>Equal-Area</td>
+          <td>
+            <audio controls>
+              <source src="audio/equal.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Biased</td>
+          <td>
+            <audio controls>
+              <source src="audio/biased.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Probability</td>
+          <td>
+            <audio controls>
+              <source src="audio/probability.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        </table>
+        <!--<video width="300" height="300" loop autoplay>
+          <source src="video/particle_smaller.mp4" type="video/mp4">
+        </video>-->
+
+        <font color="grey">
+        <h6><b>References</b></h6>
+        <div style="LINE-HEIGHT:18px; text-align:left">
+               <ol>
+                 <li><b>C. McKell</b>. <q>Sonification of optically-ordered Brownian motion</q>, 
+                  In Proceedings of the International Computer Music Conference (ICMC),  Utrecht, Netherlands, September 2016. 
+                  [<a href="/pdf/icmc_2016.pdf"  target="_blank"><b>paper</b></a>] <!--[<a href="https://quod.lib.umich.edu/i/icmc/bbp2372.2016.102/1"  target="_blank"><b>website</b></a>]--></li>
+                  <li><b>C. McKell</b>. <i>Confinement and Tracking of Brownian Particles in a Bessel Beam Standing Wave</i>, 
+                    Master's Thesis, Wake Forest University, Department of Physics, December 2015. 
+                    <!--[<a href="/pdf/McKell_wfu_0248M_10830.pdf"  target="_blank"><b>PDF</b></a>] -->
+                    [<a href="https://wakespace.lib.wfu.edu/handle/10339/57431"  target="_blank"><b>paper</b></a>] </li>
+                </ol>
+              </font></div>
+            </p>
+          <br>
+
+          <hr>
+
+              <!-- <p>
+                <div class="underline">
+                  <font size="5"></font>
+                </div>
+                </p> -->
+
+
+        <h5><b>Other Effects</b></h5>
+        <h6><b><i>Phase Vocoder</i></b></h6>
+
+        <!-- <h5><b>Phase Vocoder</b></h5> -->
+          <p> 
+            <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">The phase vocoder is an audio algorithm that stretches or compresses a signal. Sound engineers have used the
+            phase vocoder in a practical way to modify the length of audio signals. Musicians and sound designers have also 
+            used the basic principle of the phase vocoder to create pitch-shifting and pitch-correcting software, such as 
+            Auto-Tune.
+            
+            <br> <br>
+            
+            I implemented a frequency-domain version of the phase vocoder that makes use of the short-time Fourier transform,
+            phase wrapping, and overlap adding. Notably, the filtered audio retains the frequency content of the original input 
+            signal. That is, no pitch-shifting is observed.
+          </font></div>
+
+      <br> 
+        <table>
+          <tr>
+            <td>Dry</td>
+            <td>
+              <audio controls>
+                <source src="audio/guitar_dry.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Stretched</td>
+            <td>
+              <audio controls>
+                <source src="audio/vocoder_stretched.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Compressed</td>
+            <td>
+              <audio controls>
+                <source src="audio/vocoder_compressed.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+
+        <!--<img class="u-max-full-width" src="images/tape.jpg" alt="Effects" width="420">-->
+      </p>
+      <!-- <hr> -->
+ 
+
+      <h6><b><i>Delay Effects</i></b></h6>
+
+        <!-- <h5><b>Delay Effects</b></h5> -->
+          <p> 
+            <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Delay effects are ubiquitous in modern music production. Common delay effects include comb filtering, flanger, 
+            and chorus. I developed algorithms to produce each of these effects. The C++ 
+            <a href="https://github.com/chadmckell/FeedbackDelay" target="_blank"><b>code</b></a> for the feedback comb filter
+            is available on my GitHub page.
+          </font></div>
+
+        <br>
+        <table>
+           <tr>
+            <td>Dry</td>
+            <td>
+              <audio controls>
+                <source src="audio/piano.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Comb Filter</td>
+            <td>
+              <audio controls>
+                <source src="audio/delay.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Flanger</td>
+            <td>
+              <audio controls>
+                <source src="audio/flanger.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Chorus</td>
+            <td>
+              <audio controls>
+                <source src="audio/chorus.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+        <!--<img class="u-max-full-width" src="images/effects_small.jpg" alt="Effects" width="420">-->
+        </p>
+        <!-- <hr> -->
+
+
+    </div>
+  </div>
+  
+
+<br>
+
+<div class="footer"> 
+  <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+  <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+  <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+  <br> <br>
+  <font color="white">Copyright &copy 2009&ndash;2020. Chad McKell. All Rights Reserved.</font>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,768 @@
+/*
+* author: Chad McKell
+* reference: w3schools.com
+*/
+
+
+
+* {
+box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  /*padding-top: 20px; This was added to offset the content below the navigation bar when using "position=fixed" in .nav */
+}
+
+/*.nav {
+  float: right;
+}*/
+
+/* reference for banner: https://css-tricks.com/full-browser-width-bars/*/
+.banner {
+  margin: 0 0;
+  /* add back negative margin value */
+  /* padding: 0.25rem 0; */
+  padding-top: 63px;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.nav li {
+  display: inline-block;
+  line-height: 40px;
+  height: 30px;
+}
+
+.nav li a {
+  display: inline-block;
+  color: black;
+  opacity: 1.0;
+  padding: 0px 15px;
+  text-decoration: none;
+}
+
+.nav li a.active {
+  /*background-color: #000; */
+  opacity: 1.0;
+  color: #ff1e00; /* orange red */
+}
+
+
+.nav li a:hover:not(.active) {
+  background-color: white;
+  color: #000; /* black */ 
+}
+
+/*-.navpos {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 500px;
+  height: 50px;
+}*/
+
+.container a:hover {
+  color: #F03F69; /*pink red */
+}
+
+.container op a {
+  opacity: 1.0;
+}
+
+.container op a:hover {
+  opacity: 0.7;
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/* Reference for card-container: https://medium.com/@PavelLaptev/css-weekly-2-an-image-on-the-left-text-on-the-left-a5e59b2acdb5 */
+
+.card-section {
+  background-color: #FCFCFC;  
+  padding: 80px 80px;
+  text-align: justify;
+}
+
+.card-container {
+    border: white;
+    padding: 30px 30px 30px;
+    display: flex;
+    text-align: left;
+    &__image {
+        margin: 20px 20px 0 0;
+        width: 200px;
+        object-fit: contain;
+        align-self: flex-start;
+    }
+    &__text {
+        flex: 1 1 auto;
+    }
+}
+
+.name {
+  float: left;
+}
+
+/* reference for namepos: https://www.w3schools.com/howto/howto_css_blurred_background.asp */
+.namepos {
+  color: white; 
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+
+.enterpos {
+  color: white; 
+  border-radius: 5px;
+  /*background-color: rgba(255, 255, 255, 0.8); Black w/opacity/see-through */
+  border: 3px solid black;
+  /*position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;*/
+  width: 30%;
+  padding: 8px;
+  text-align: center;
+  align-content: center;
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #000 url("https://chadmckell.com/images/icon.png");
+  opacity: 0.8;
+}
+
+.section {
+  background-color: white;  
+  padding: 16px 16px;
+  text-align: left;
+}
+
+/* Reference for linear gradient: https://stackoverflow.com/questions/26621513/darken-css-background-image */
+.footer {
+  /* background-color: rgb(128, 133, 146);   */
+  color: #000;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("https://chadmckell.com/images/shores2.jpg");
+  /* background-image: url("https://chadmckell.com/images/shores2.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.0;
+}
+
+.fa {
+  color: white;
+  margin-right: 20px;
+}
+
+.full-page-image {
+  background-image: url("https://chadmckell.com/images/shores2.jpg");
+  /*filter: blur(1px);*/
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+}
+
+
+
+table, th, td {
+  padding: 20px;
+  vertical-align: top;
+}
+
+
+
+p.left-cell {
+  margin-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+p.right-cell {
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+p.content {
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+p.course-content {
+  display: block;
+}
+
+p.course-content-hide {
+  display: none;
+}
+
+
+/* Reference: https://stackoverflow.com/questions/32296136/underlining-lines-in-full-width-not-only-text */
+.underline{
+  border-bottom: 2px solid #000000;
+  width: 100%;
+  display: block;
+  }
+
+
+
+/* Reference for split screen: https://www.w3schools.com/howto/howto_css_split_screen.asp */
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 0px;
+  display: block;
+}
+  
+.left {
+  left: 0;
+  margin:auto;
+  padding:0;
+  top: 20%;
+  display: block;
+}
+  
+.right {
+  right: 0;
+  /* background-color: red; */
+  background-image: url("https://chadmckell.com/images/me2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:auto;
+  padding:0;
+  display: block;
+
+  /*background-size: contain;*/
+  /*background-size: 100% 50%;*/
+}
+  
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  }
+
+
+
+  .namepos2 {
+    color: white; 
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+
+    /* https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */
+
+    #myVideo {
+      /*position: fixed;*/
+     right: 0;
+     bottom: 0;
+     min-width: 100%; 
+     min-height: 100%;
+   }
+
+
+@media only screen and (max-width: 850px){
+
+
+   .namepos {
+    /* top: 40%;*/
+    width: 40%;
+  }
+}
+
+
+
+/* Do the following for mobile devices */
+
+@media only screen and (max-width: 650px){
+  /*
+  #menu-icon{
+    display: inline-block;
+  }
+  
+  .nav ul {
+    display: none;
+    float: right;
+    position: absolute;
+  }
+  */
+  
+
+  .section {
+    padding: 2px 2px;
+  }
+
+
+  /* Reference for re-sizing tables: https://css-tricks.com/responsive-data-tables/ */
+  
+     
+
+  p.left-cell {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  p.right-cell {
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  p.content {
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  
+
+  table, th, td, tr {
+    padding: 0px;
+    vertical-align: top;
+  }
+
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+		
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		/*border-bottom: 1px solid #eee; */
+		position: relative;
+    /*padding-left: 50%; */
+    
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+  }
+
+  .namepos {
+    /* top: 40%;*/
+    width: 70%;
+  }
+
+  .namepos2 {
+    top: 70%;
+  }
+
+  /* .footer {
+    height: 25%;
+  } */
+
+
+  p.course-content{
+    display: none;
+  }
+
+
+  p.course-content-hide {
+    display: block;
+  }
+
+
+    /* https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */
+
+    #myVideo {
+     position: fixed;
+     right: 0;
+     bottom: 0;
+     min-width: 100%; 
+     min-height: 100%;
+   }
+   
+
+  /* Reference for mobile navigation bar: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp 
+
+
+  .nav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+
+  .nav #myLinks {
+    display: none;
+  }
+
+  .nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .nav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .active {
+    background-color: #4CAF50;
+    color: black;
+  }
+  */
+  
+}
+
+
+@media only screen and (max-width: 450px){
+
+  /* html, body {
+    padding-top: 40px; 
+  } */
+
+  td {
+    width: 100%;
+  }
+
+  table, thead, tbody, th, td, tr { 
+    display: block;
+  }
+  
+  p.left-cell {
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+  }
+  p.right-cell {
+    margin-left: 10px;
+    margin-right: 22px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  p.content {
+    margin-left: 6px;
+    margin-right: 18px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+
+  p.content{
+    display: none;
+  }
+
+  
+  table { 
+    /* width: 290px; */
+  }
+
+  .split {
+    width: 100%;
+  }
+}
+
+/* Reference for image wrapping: https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering
+*/
+
+.img-wrap {
+  position: relative;
+  height: 325px;
+  width: 300px;
+}
+
+.img-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(50,50,50, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.img-wrap:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+/* REFERENCE FOR THE "HEADER" CODE WRITTEN BELOW (as well as the "Header" code located in the corresponding html files):
+
+https://medium.com/creative-technology-concepts-code/responsive-mobile-dropdown-navigation-using-css-only-7218e4498a99 
+
+LICENSE: All code belongs to the poster (Kim Turley) and no license is enforced. JSFiddle or its authors are not responsible or 
+liable for any loss or damage of any kind during the usage of provided code. */
+
+/* body {
+  margin: 0;
+  font-family: 'Droid Serif', serif;
+  background-color: #f4f4f4;
+} */
+
+
+
+/* header */
+
+
+
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  /* box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  /* opacity: 0.9; */
+}
+
+
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  padding-right: 40px;
+  margin-bottom: 0px;
+  /* background-color: #fff; */
+}
+
+.header li {
+  line-height: 0px;
+  height: 0px;
+  margin-bottom: 20px; 
+  padding-bottom: 20px;
+  font-size: 1em; 
+  /* font-family: sans-serif; */
+}
+
+.header li a {
+  display: inline-block;
+  color: black;
+  padding: 10px 25px;
+  /* border-right: 1px solid #f4f4f4; */
+  text-decoration: none;
+}
+
+
+.header li a.active {
+  /*background-color: #000; */
+  opacity: 1.0;
+  color: #FF4500; /* orange red */
+}
+
+
+.header li a:hover:not(.active) {
+  background-color: white;
+  color: #c08975; /* orange red */ 
+}
+
+
+/* .header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+} */
+
+.header .logo {
+  display: block;
+  color: black;
+  float: left;
+  font-size: 1.5em;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  /* font-family: American Typewriter, serif; */
+  font-family: 'Courier New', Courier, monospace;
+  /* font-family: Courier, monospace; */
+  /* font-family: "Lucida Console",  monospace; */
+  padding: 12px 25px;
+  text-decoration: none;
+  /* font-variant-caps: all-small-caps; */
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 25px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 58em) {
+  .header li {
+    float: left;
+    line-height: 20px;
+    height: 30px;
+  }
+  .header li a {
+    padding: 20px 22px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  .header .logo {
+    padding: 12px 60px;
+  }
+
+  .banner {
+    padding-top: 60px;
+  }
+
+}
+
+
+
+

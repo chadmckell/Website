@@ -1,0 +1,250 @@
+<!--
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Modified by Chad McKell
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Effects</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="images/fairy2.jpg">
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+  
+</head>
+<body>
+
+
+  <header class="header">
+    <a href="index" class="logo">CHAD MCKELL</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="research">Research</a></li>
+      <li><a href="publications">Publications</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="teaching">Teaching</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </header>
+
+  
+  
+  <!-- <header>
+    <div class="nav">
+        
+    <a id="menu-icon"></a>
+        
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="about.html">About</a></li>
+      </ul>
+      
+    </div>
+</header> -->
+
+  <div class="banner">
+	<img style="width:100%;" id="image" src="images/amp.jpg">
+  </div>
+  
+  
+  <div class="section">
+    <div class="container">
+      <div class="one-half column">
+        <br>
+        <h4>Room Reverberation</h4>
+          <p> 
+            I modeled room reverberation using the image-source method. The model simulates the impulse response of a
+            room and then convolves the impulse response with the original input audio in the time domain. For simplicity,
+            I assumed that the walls of the room were flat and positioned perpendicular to each other.
+            
+            <br> <br>
+            
+            The equation that defines the magnitude \(g\) of each impulse in the simulated impulse response takes the form
+            
+            $$g = {(\sqrt{1-\alpha})^w \over l}$$
+            
+            where \(\alpha\) is the absorption coefficient of the walls, \(w\) is the total number of collisions between the 
+            sound wave and the walls for each image source, and \(l\) is the total distance between the receiver and each 
+            image source. (Note that high absorption values correspond to low reverberant rooms). The MATLAB 
+            <a href="https://github.com/chadmckell/ImageSourceBasic">code</a> for my reverb model is available on my GitHub
+            page.
+          </p>
+      </div>
+      <div class="one-half column">
+        <br> <br> <br> <br>
+        <img class="u-max-full-width" src="images/room.jpg" alt="Moog Synth" width="420">
+        <table>
+          <tr>
+            <td>Dry</td>
+            <td>
+              <audio controls>
+                <source src="audio/guitar_dry.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>High Absorption</td> 
+            <td>
+              <audio controls>
+                <source src="audio/reverb_high.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Low Absorption</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_low.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+   <div class="section">
+    <div class="container">
+      <div class="one-half column">
+        <h4>Phase Vocoder</h4>
+          <p> 
+            The phase vocoder is an audio algorithm that stretches or compresses a signal. Sound engineers have used the
+            phase vocoder in a practical way to modify the length of audio signals. Musicians and sound designers have also 
+            used the basic principle of the phase vocoder to create pitch-shifting and pitch-correcting software, such as 
+            Auto-Tune.
+            
+            <br> <br>
+            
+            I implemented a frequency-domain version of the phase vocoder that makes use of the short-time Fourier transform,
+            phase wrapping, and overlap adding. Notably, the filtered audio retains the frequency content of the original input 
+            signal. That is, no pitch-shifting is observed.
+          </p>
+      </div>
+      <div class="one-half column">
+        <br> <br> <br>
+        <img class="u-max-full-width" src="images/tape.jpg" alt="Effects" width="420">
+        <table>
+          <tr>
+            <td>Dry</td>
+            <td>
+              <audio controls>
+                <source src="audio/guitar_dry.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Stretched</td>
+            <td>
+              <audio controls>
+                <source src="audio/vocoder_stretched.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Compressed</td>
+            <td>
+              <audio controls>
+                <source src="audio/vocoder_compressed.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="one-half column">
+        <h4>Digital Delay</h4>
+          <p> 
+            Delay effects are ubiquitous in modern music production. Common delay effects include comb filtering, flanger, 
+            and chorus. I developed algorithms to produce each of these effects. The C++ 
+            <a href="https://github.com/chadmckell/FeedbackDelay">code</a> for the feedback comb filter
+            is available on my GitHub page.
+          </p>
+      </div>
+      <div class="one-half column">
+        <br> <br> <br>
+        <img class="u-max-full-width" src="images/effects_small.jpg" alt="Effects" width="420">
+        <table>
+           <tr>
+            <td>Dry</td>
+            <td>
+              <audio controls>
+                <source src="audio/piano.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Comb Filter</td>
+            <td>
+              <audio controls>
+                <source src="audio/delay.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Flanger</td>
+            <td>
+              <audio controls>
+                <source src="audio/flanger.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Chorus</td>
+            <td>
+              <audio controls>
+                <source src="audio/chorus.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer"> 
+    <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+    <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+    <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+    <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+    <br> <br>
+    <font color="white">Copyright &copy 2009&ndash;2020. Chad McKell. All Rights Reserved.</font>
+</div>
+
+</body>
+</html>

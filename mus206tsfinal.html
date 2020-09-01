@@ -1,0 +1,195 @@
+<!--
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Modified by Chad McKell
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>MUS 206</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="images/fairy2.jpg">
+
+
+  <!-- reference for putting images side by side https://www.w3schools.com/howto/howto_css_images_side_by_side.asp -->
+  <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .column-special {
+        float: left;
+        width: 33.33%;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row-special::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(61, 68, 180); }
+      } 
+  </style>
+  
+</head>
+<body>
+
+
+
+  <header class="header">
+    <a href="index" class="logo">CHAD MCKELL</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="research">Research</a></li>
+      <li><a href="publications">Publications</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="teaching">Teaching</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </header>
+  
+
+  <!-- <header>
+    <div class="nav">
+        
+    <a id="menu-icon"></a>
+        
+      <ul>
+          <li><a href="index">Home</a></li>
+          <li><a href="research">Research</a></li>
+          <li><a href="publications">Publications</a></li>
+          <li><a href="teaching">Teaching</a></li>
+          <li><a href="about">About</a></li>
+      </ul>
+      
+    </div>
+  </header> -->
+
+  <div class="banner">
+	  <img style="width:100%;" id="image" src="images/mixer.jpg">
+  </div>
+  
+
+  <div class="section">
+      <div class="container">
+       
+          <!--<div class="one-third column">
+          <div class="card">
+            <div class="card-container">
+              physical modeling sound synthesis
+            </div>
+          </div>
+        </div>-->
+
+      <!--<div class="two-thirds column" style="LINE-HEIGHT:16px; text-align:left">-->
+   
+      <br>
+      <h3><b>MUS 206 Final Project: The 2D Digital Waveguide Mesh </b></h3>
+
+      <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+  
+      <font size="5"><b>Audio Samples</b></font>
+      <br>
+      <table>
+        <tr>
+          <td>Mylar, 1x1 m<sup>2</sup></td>
+          <td>
+            <audio controls>
+              <source src="audio/mus206ts_1x1mesh.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Mylar, 3x3 m<sup>2</sup></td>
+          <td>
+            <audio controls>
+              <source src="audio/mus206ts_3x3mesh.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Mylar, 5x5 m<sup>2</sup></td>
+          <td>
+            <audio controls>
+              <source src="audio/mus206ts_5x5mesh.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+      </table>
+
+      
+      <font size="5"><b>Plots (mylar, 3x3 m<sup>2</sup>)</b></font>
+      <br>
+      <img class="u-max-full-width" src="images/mus206_TS_plot.png" alt="profile picture" width="550">
+
+      <br><br>
+      <font size="5"><b>Animation (mylar, 5x5 m<sup>2</sup>)</b></font>
+      <br>
+      <!-- <video class="u-max-full-width" width="550" controls> -->
+      <video style="width:50%" playsinline autoplay muted loop>
+        <source src="video/mus206ts_5x5mesh.mp4" type="video/mp4">
+      </video>
+
+      
+      <br><br>
+      <a href="pdf/mus206ts_present.pdf" target="_blank"><font size="5"><b>Paper Presentation</b></font></a>
+      <br>
+      <a href="https://github.com/chadmckell/DWGMesh/blob/master/mesh.m" target="_blank"><font size="5"><b>Matlab Code</b></font></a>
+      <br>
+      <p>
+      <br>
+      <font size="5"><b>References</b></font>
+      <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
+             <ol>
+              <li>Van Duyne, Scott A., and Julius O. Smith. “Physical modeling with the 2-D digital waveguide mesh.” In Proceedings of the International Computer Music Conference (ICMC), 1993.</li> 
+            </ol>
+            </font></div>
+      </p>
+
+
+      </div>
+    <!--</div>-->
+</div>
+
+
+<br><br>
+
+<div class="footer"> 
+  <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+  <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+  <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+  <br> <br>
+  <font color="white">Copyright &copy 2009&ndash;2020. Chad McKell. All Rights Reserved.</font>
+</div>
+
+</body>
+</html>

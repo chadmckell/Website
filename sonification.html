@@ -1,0 +1,267 @@
+<!--
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Modified by Chad McKell
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Sonification</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="images/fairy2.jpg">
+
+</head>
+<body>
+
+
+  <header class="header">
+    <a href="index" class="logo">CHAD MCKELL</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="research">Research</a></li>
+      <li><a href="publications">Publications</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="teaching">Teaching</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </header>
+  
+
+  <!-- <header>
+      <div class="nav">
+
+      <a id="menu-icon"></a>
+
+        <ul>
+            <li><a href="index">Home</a></li>
+            <li><a href="research">Research</a></li>
+            <li><a href="publications">Publications</a></li>
+            <li><a href="teaching">Teaching</a></li>
+            <li><a href="about">About</a></li>
+        </ul>
+
+      </div>
+  </header> -->
+
+  <div class="banner">
+	  <img style="width:100%;" id="image" src="images/amp_bw_cover.jpg">
+  </div>
+  
+  <div class="section">
+    <div class="container">
+    
+  <br>
+    <h3><b>Compositional Algorithms</b></h3>
+
+      <h5><b>Stochastic Sonification</b></h5>
+      <p> 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Inspired by Iannis Xenakis' 1956 work <i>Pithoprakta</i>, I used a 
+          modern laser trapping setup to track Brownian particles and sonify their motion. I built the optics setup as part of my master's 
+          <a href="https://wakespace.lib.wfu.edu/handle/10339/57431" target="_blank">thesis</a> in Physics at Wake Forest University in Winston-Salem, 
+          North Carolina. I sonified the position data of single, optically-trapped Brownian microspheres (like the one shown below) 
+          using Pure Data and Ableton Live. Each radial displacement of the sphere mapped to an audible pitch. 
+          
+          <br><br>
+          
+          I used three different mapping schemes&mdash;equal-area, biased, and probability mapping. In each scheme, the 
+          centermost subregion of the mapping region corresponded to a single pure tone. In equal-area mapping, the
+          note increased along a particular musical scale as the particle moved out radially into different equal-area 
+          subregions. In biased mapping, the centermost subregion area was enlarged relative to the other subregions. In 
+          probability mapping, the note had a 50-50 percent probability of increasing by some integer number of midi note 
+          numbers or decreasing by some other integer number of midi note numbers each time the particle entered a new 
+          subregion. I wrote a conference <a href="/pdf/icmc_2016.pdf" target="_blank">paper</a> that provides more details on the project. I also 
+          made a series of <a href="https://www.youtube.com/user/chadmckell/videos" target="_blank">videos</a> that synchronize the sounds
+          to the actual experimental motion.
+      </font></div>
+      </p>
+
+      <table>
+        <tr>
+          <td>Equal-Area</td>
+          <td>
+            <audio controls>
+              <source src="audio/equal.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Biased</td>
+          <td>
+            <audio controls>
+              <source src="audio/biased.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Probability</td>
+          <td>
+            <audio controls>
+              <source src="audio/probability.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        </table>
+        <video width="300" height="300" playsinline autoplay muted loop>
+          <source src="video/particle_smaller.mp4" type="video/mp4">
+        </video>
+
+        <h6><b>References</b></h6>
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
+               <ol>
+                 <li><b>C. McKell</b>. <a href="https://quod.lib.umich.edu/i/icmc/bbp2372.2016.102/1"  target="_blank">Sonification of optically-ordered Brownian motion</a> <a href="/pdf/icmc_2016.pdf"  target="_blank">[pdf]</a>, Proceedings of the International Computer Music Conference (ICMC),  Utrecht, Netherlands, September 2016.</li>
+               </ol>
+              </font></div>
+
+    </div>
+  </div>
+  
+
+
+    <!--
+
+  <div class="section">
+    <div class="container">
+      <div class="one-half column">
+        <br><br>
+        <table>
+        <tr>
+          <td>Equal-Area</td>
+          <td>
+            <audio controls>
+              <source src="audio/equal.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Biased</td>
+          <td>
+            <audio controls>
+              <source src="audio/biased.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        <tr>
+          <td>Probability</td>
+          <td>
+            <audio controls>
+              <source src="audio/probability.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        </table>
+      </div>
+      <div class="one-half column">
+        <video width="300" height="300" loop autoplay>
+          <source src="video/particle_smaller.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="container">
+      <div class="one-half column">
+        <br>
+        <h4><b>Compositional Algorithms</b></h4>
+        <h5><b>Stochastic Sonification</b></h5>
+          <p> 
+            <div style="LINE-HEIGHT:16px; text-align:left"><font color="grey">Inspired by Iannis Xenakis' 1956 work <i>Pithoprakta</i>, I used a 
+            modern laser trapping setup to track Brownian particles and sonify their motion. I built the optics setup as part of my master's 
+            <a href="https://wakespace.lib.wfu.edu/handle/10339/57431">thesis</a> in Physics at Wake Forest University in Winston-Salem, 
+            North Carolina. I sonified the position data of single, optically-trapped Brownian microspheres (like the one shown at right) 
+            using Pure Data and Ableton Live. Each radial displacement of the sphere mapped to an audible pitch. 
+            
+            <br><br>
+            
+            I used three different mapping schemes&mdash;equal-area, biased, and probability mapping. In each scheme, the 
+            centermost subregion of the mapping region corresponded to a single pure tone. In equal-area mapping, the
+            note increased along a particular musical scale as the particle moved out radially into different equal-area 
+            subregions. In biased mapping, the centermost subregion area was enlarged relative to the other subregions. In 
+            probability mapping, the note had a 50-50 percent probability of increasing by some integer number of midi note 
+            numbers or decreasing by some other integer number of midi note numbers each time the particle entered a new 
+            subregion.
+
+            <br> <br>
+            
+            I wrote a conference <a href="/pdf/icmc_2016.pdf">paper</a> that provides more details on the project. I also 
+            made a series of <a href="https://www.youtube.com/user/chadmckell/videos">videos</a> that synchronize the sounds
+            to the actual experimental motion.</font></div>
+            
+          </p>
+      </div>
+      <div class="one-half column">
+        <br> <br> <br><br>
+        <video width="300" height="300" loop autoplay>
+          <source src="video/particle_smaller.mp4" type="video/mp4">
+        </video>
+        <table>
+          <tr>
+            <td>Equal-Area</td>
+            <td>
+              <audio controls>
+                <source src="audio/equal.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Biased</td>
+            <td>
+              <audio controls>
+                <source src="audio/biased.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Probability</td>
+            <td>
+              <audio controls>
+                <source src="audio/probability.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+-->
+
+<br>
+
+<div class="footer"> 
+  <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+  <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+  <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+  <br> <br>
+  <font color="white">Copyright &copy 2009&ndash;2020. Chad McKell. All Rights Reserved.</font>
+</div>
+
+<!-- End Document -->
+</body>
+</html>

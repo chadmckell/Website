@@ -1,0 +1,148 @@
+<!--
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Modified by Chad McKell
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Speech</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="images/fairy2.jpg">
+  
+</head>
+<body>
+
+
+  <header class="header">
+    <a href="index" class="logo">CHAD MCKELL</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="research">Research</a></li>
+      <li><a href="publications">Publications</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="teaching">Teaching</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </header>
+  
+  <!-- <header>
+    <div class="nav">
+        
+    <a id="menu-icon"></a>
+        
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="about.html">About</a></li>
+      </ul>
+      
+    </div>
+  </header> -->
+
+  <div class="banner">
+	  <img style="width:100%;" id="image" src="images/amp.jpg">
+  </div>
+
+  
+  <div class="section">
+    <div class="container">
+      <div class="one-half column">
+        <br>
+        <h4>Speech Synthesis</h4>
+          <p> 
+            Wolfgang von Kempelen created the first known speech synthesizer in 1791. The device used a variety of parts to 
+            imitate human speech&mdash;a bellows for the lungs, a reed for the vocal folds, tubes for the various vocal-tract geometries, 
+            and so on. By reproducing the subtleties of linguistic sounds from observations of the acoustic and physiological 
+            mechanisms of speech, Kempelen set the stage for more advanced speech synthesis techniques that would emerge 
+            centuries later.
+            
+            <br> <br>
+
+            Physical modeling speech synthesis is a computational approach to artificial voice production that generates 
+            acoustic sounds by numerically solving a mathematical model of speech. As part of my special project 
+            <a href="/pdf/speech_2017.pdf">dissertation</a> in Acoustics and Music Technology at the University of Edinburgh, 
+            I developed physical modeling simulations of vocal-tract sound propagation by solving Webster's equation with
+            finite-difference time-domain (FDTD) methods. For another course project, I also created a unit selection speech 
+            synthesizer, which concatenates individual diphones of speech. Code from my 
+            <a href="https://github.com/chadmckell/FDTDSpeech">FDTD</a> and <a href="https://github.com/chadmckell/UnitSpeech">unit selection</a>
+            speech synthesizers is available on my GitHub page.
+            
+            <br> <br>
+            
+            To demonstrate my simulations, I used the English phrase 
+            
+            <br>
+           
+            <center><i>I owe you a yo-yo.</i></center> 
+            
+            <br>
+            
+            I chose this phrase because it contains only vowels and diphthongs. Other speech sounds, like consonants
+            and glottal fry, were reserved for future research.
+          </p>
+      </div>
+      <div class="one-half column">
+        <br> <br> <br> <br>
+        <img class="u-max-full-width" src="images/speech.jpg" alt="Speech" width="420">
+        <table>
+          <tr>
+            <td>FDTD</td>
+            <td>
+              <audio controls>
+                <source src="audio/speech_fdtd_quiet.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Unit Selection</td>
+            <td>
+              <audio controls>
+                <source src="audio/speech_unit.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+
+  <div class="footer"> 
+    <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+    <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+    <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+    <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+    <br> <br>
+    <font color="white">Copyright &copy 2009&ndash;2020. Chad McKell. All Rights Reserved.</font>
+</div>
+
+</body>
+</html>

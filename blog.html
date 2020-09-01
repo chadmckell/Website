@@ -1,0 +1,350 @@
+<!--
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Modified by Chad McKell
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="images/fairy2.jpg">
+
+
+  <!-- reference for putting images side by side https://www.w3schools.com/howto/howto_css_images_side_by_side.asp -->
+  <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .column-special {
+        float: left;
+        width: 33.33%;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row-special::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(61, 68, 165); }
+      } 
+  </style>
+  
+</head>
+<body>
+
+
+  <header class="header">
+    <a href="index" class="logo">CHAD MCKELL</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="research">Research</a></li>
+      <li><a href="publications">Publications</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="teaching">Teaching</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </header>
+
+  <!-- <header>
+    <div class="nav">
+        
+    <a id="menu-icon"></a>
+        
+      <ul>
+        <li><a href="index">Home</a></li>
+        <li><a href="research">Research</a></li>
+        <li><a href="publications">Publications</a></li>
+        <li><a href="teaching">Teaching</a></li>
+        <li><a href="about">About</a></li>
+      </ul>
+      
+    </div>
+  </header> -->
+
+  <div class="banner">
+	  <img style="width:100%;" id="image" src="images/shores.jpg">
+  </div>
+  
+
+  <div class="section">
+      <div class="container-narrow">
+       
+          <!--<div class="one-third column">
+          <div class="card">
+            <div class="card-container">
+              physical modeling sound synthesis
+            </div>
+          </div>
+        </div>-->
+
+      <!--<div class="two-thirds column" style="LINE-HEIGHT:16px; text-align:left">-->
+   
+      <br>
+      <h3><b>CSE 167 Final Project</b></h3>
+
+
+      <h5><b>Blog Post #4</b></h5>
+      <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+
+      <div style="text-align:left">
+      <b>Description of Work Completed</b>: I finished the shadow mapping and added a textured floor.
+    
+      </div>
+      <br>
+
+      Final render:
+      <img style="width:100%;" src="images/desert_final.png">
+
+      <hr>
+
+      <h5><b>Blog Post #3</b></h5>
+      <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+
+      <div style="text-align:left">
+        <b>Updates to Original Plan</b>: I decided not to program collision detection with bounding spheres or boxes. 
+        <br>
+        <br>
+      <b>Description of Work Completed</b>: I completed the following during the last week:
+      <br>
+      (i) Added background environment sound<br>
+      (ii) Added shadow mapping (still some kinks to iron out)<br>
+      (iii) Added Phong illumination with both point and directional lights<br>
+      (iv) Imported new 3D models of musical instruments and a Victorian house
+      <br>
+
+      </div>
+      <br>
+
+      Desert scene:
+      <img style="width:100%;" src="images/desertRender2.png">
+
+      <br>
+      <br>
+      <br>
+      Inside the house:
+      <img style="width:100%;" src="images/houseRender2.png">
+
+      <br>
+      <br>
+      <br>
+      Shadow cast on inside of house:
+      <img style="width:100%;" src="images/shadow.png">
+
+      <br>
+
+      <hr>
+
+
+
+      <h5><b>Blog Post #2</b></h5>
+      <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+
+      <div style="text-align:left">
+      <b>Updates to Original Plan</b>: In order to focus more attention on the game play aspects of "Desert Sounds", I made the
+      following modifications to my original plan:
+      <br>
+      (i) import 3D models of trees rather than procedurally generate them using L-systems <br>
+      (ii) add first-person camera control with player movements 
+      <br>
+      <br>
+      <b>Description of Work Completed</b>: I completed the following during the last week:
+      <br>
+      (i) Created desert skybox <br>
+      (ii) Imported 3D models of trees, house, and musical instruments
+      <br>
+
+      </div>
+      <br>
+
+      Desert scene:
+      <img style="width:100%;" src="images/desertRender1.jpg">
+
+      <br>
+      <br>
+      <br>
+      Close-up of the house (notice the violin and the guitar in the front yard):
+      <img style="width:100%;" src="images/houseRender1.jpg">
+
+      <br>
+
+      <hr>
+
+
+
+
+
+
+        <h5><b>Blog Post #1</b></h5>
+        <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+
+        <div style="text-align:left">
+        <b>Title of project</b>: "Desert Sounds"
+        <br>
+        <br>
+        <b>Name</b>: Chad McKell
+        <br>
+        <br>
+        <b>Description</b>: "Desert Sounds" is a desert environment with a world of sounds to discover&mdash;a babbling brook, a pond with 
+        crickets, and a concrete house with musical instruments. When the application opens, the player will be placed about 100 meters away from the house. 
+        The player may then choose to walk to the brook, the pond, or the house. Musical instruments will be placed inside the house as well 
+        as on the porch outside in order to demonstrate that the acoustics vary by location.
+        <br>
+        <br>
+        <b>Technical Features</b>: 
+        <br>
+        1. <u>Easy</u>: 
+        <br>
+        (i) Collision detection with bounding spheres or boxes <br>
+        (ii) Sound effects<br>
+        <br>
+        2. <u>Medium</u>: <br>
+        (i) Procedurally generated plants with L-systems <br>
+        (ii) Shadow mapping <br>
+        <br>
+        <br>
+        <b>Creative efforts</b>: First, I will collect a number of audio files to match various scenes in my environment. Then, I 
+        will use a convolution reverberation algorithm to simulate realistic room acoustics in the concrete house.
+        <br>
+
+        </div>
+        <br>
+
+        Out in the desert:
+        <img style="width:100%;" src="images/desert.jpg">
+
+        <br>
+        <br>
+        <br>
+        Inside the concrete house, we find musical instruments (e.g. a cymbal):
+        <img style="width:100%;" src="images/house.jpg">
+        <br><br>
+
+
+
+      </div>
+    <!--</div>-->
+</div>
+
+
+ <!--
+
+  
+  <div class="section">
+    <div class="container">
+      
+
+      <div class="one-third column">
+        <div class="img-wrap">
+          <a href="virtual_analog.html"><img class="u-max-full-width" src="images/tube.jpg" alt="virtual analog" width="700">
+          <h3><p class="img-description">Virtual Analog</p></h3></a>
+        </div>
+      </div>
+      
+      
+      <div class="one-third column">
+        <div class="img-wrap">
+          <a href="instruments.html"><img class="u-max-full-width" src="images/string.jpg" alt="instrument synthesis" width="700">
+          <h3><p class="img-description">Instrument Synthesis</p></h3></a>
+        </div>
+      </div>
+      
+      <div class="one-third column">
+        <div class="img-wrap">
+          <a href="effects.html"><img class="u-max-full-width" src="images/effects.jpg" alt="audio effects" width="700">
+          <h3><p class="img-description">Audio Effects</p></h3></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <br>
+    
+    <div class="container">
+  
+      <div class="one-third column">
+        <div class="img-wrap">
+          <a href="sonification.html"><img class="u-max-full-width" src="images/icon.jpg" alt="sonification" width="700">
+          <h3><p class="img-description">Data Sonification</p></h3></a>
+        </div>
+      </div>
+      
+
+
+      <div class="one-third column">
+        <div class="img-wrap">
+          <a href="speech.html"><img class="u-max-full-width" src="images/speech.jpg" alt="speech" width="700">
+          <h3><p class="img-description">Speech</p></h3></a>
+        </div>
+      </div>
+           
+      <div class="one-third column">
+        <div class="img-wrap">
+          <a href="lofelt.html"><img class="u-max-full-width" src="images/lofelt.jpg" alt="lofelt" width="700">
+          <h3><p class="img-description">Haptics</p></h3></a>
+        </div>
+      </div>
+
+    </div>
+  
+    <br>
+
+    
+    <div class="container">
+
+      
+         <div class="one-third column">
+        <div class="img-wrap">
+          <a href="moog.html"><img class="u-max-full-width" src="images/moog.jpg" alt="moog" width="700">
+          <h3><p class="img-description">Moog</p></h3></a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+-->
+
+
+<br>
+
+<div class="footer"> 
+  <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+  <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+  <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+  <br> <br>
+  <font color="white">Copyright &copy 2009&ndash;2020. Chad McKell. All Rights Reserved.</font>
+</div>
+
+</body>
+</html>
+
