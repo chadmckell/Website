@@ -69,8 +69,8 @@
     padding: 0; }  
 }
 
-/* For devices larger than 1000px */
-@media (min-width: 1250px) {
+/* For devices larger than 1150px */
+@media (min-width: 1000px) {
   .container {
     width: 80%; }
   .container-wide {

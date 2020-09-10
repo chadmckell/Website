@@ -232,7 +232,7 @@ p.course-content {
   display: block;
 }
 
-p.course-content-hide {
+p.course-content-mobile {
   display: none;
 }
 
@@ -320,13 +320,33 @@ p.course-content-hide {
    }
 
 
-@media only screen and (max-width: 850px){
+   /* Reference: https://css-tricks.com/fluid-width-video/ */
+  .video-container {
+    position: relative;
+    padding-bottom: 90%;
+    height: 0;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+@media only screen and (max-width: 1200px){
 
 
    .namepos {
     /* top: 40%;*/
     width: 40%;
   }
+
+  audio { 
+    width: 210px; 
+  }
+  
 }
 
 
@@ -375,12 +395,10 @@ p.course-content-hide {
     margin-bottom: 15px;
   }
 
-  
-
-  table, th, td, tr {
-    padding: 0px;
-    vertical-align: top;
+  p.content{
+    display: none;
   }
+
 
 	
 	/* Hide table headers (but not display: none;, for accessibility) */
@@ -410,6 +428,7 @@ p.course-content-hide {
 		white-space: nowrap;
   }
 
+
   .namepos {
     /* top: 40%;*/
     width: 70%;
@@ -429,7 +448,7 @@ p.course-content-hide {
   }
 
 
-  p.course-content-hide {
+  p.course-content-mobile {
     display: block;
   }
 
@@ -494,13 +513,13 @@ p.course-content-hide {
     padding-top: 40px; 
   } */
 
-  td {
+  /* td {
     width: 100%;
-  }
+  } */
 
-  table, thead, tbody, th, td, tr { 
+  /* table, thead, tbody, th, td, tr { 
     display: block;
-  }
+  } */
   
   p.left-cell {
     margin-left: 20px;
@@ -522,14 +541,19 @@ p.course-content-hide {
     margin-bottom: 15px;
   }
 
-  p.content{
-    display: none;
+  table, th, td, tr {
+    padding: 0px;
+    vertical-align: top;
   }
 
-  
-  table { 
-    /* width: 290px; */
+  table, thead, tbody, th, td, tr { 
+    display: block;
   }
+
+  td {
+    width: 100%;
+  }
+
 
   .split {
     width: 100%;
@@ -562,7 +586,15 @@ p.course-content-hide {
   opacity: 1;
 }
 
+/* audio { width: 275px; } */
 
+
+
+
+
+/* embed, iframe, object {
+  max-height: 300px;
+} */
 
 
 /* REFERENCE FOR THE "HEADER" CODE WRITTEN BELOW (as well as the "Header" code located in the corresponding html files):
@@ -731,6 +763,12 @@ liable for any loss or damage of any kind during the usage of provided code. */
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
+}
+
+@media only screen and (max-width: 350px){
+
+  audio { width: 200px; }
+
 }
 
 /* 48em = 768px */
