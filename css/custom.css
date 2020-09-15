@@ -126,6 +126,10 @@ table {
 }
 
 
+/* font {
+  color: green;
+} */
+
 
 
 
@@ -543,7 +547,7 @@ p.course-content-mobile {
 }
 
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 500px){
 
   /* html, body {
     padding-top: 40px; 
@@ -582,6 +586,14 @@ p.course-content-mobile {
     vertical-align: top;
   }
 
+  .split {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+
   table, thead, tbody, th, td, tr { 
     display: block;
   }
@@ -589,12 +601,8 @@ p.course-content-mobile {
   td {
     width: 100%;
   }
-
-
-  .split {
-    width: 100%;
-  }
 }
+
 
 /* Reference for image wrapping: https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering
 */
