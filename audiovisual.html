@@ -94,7 +94,8 @@
       <h5><b>Acoustic Simulation for Complex Geometries</b></h5>
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four harmonic modes of the Stanford 
-            bunny. For each bunny, I computed the displacement \(u\) of the corresponding harmonic mode (plotted in chroma) by numerically solving the 
+            bunny. From left to right, I've plotted the \(0^{th}\), \(1^{st}\), \(2^{nd}\), and \(6^{th}\) modes. I computed the 
+            displacement \(u\) of each mode (plotted in chroma) by numerically solving the 
             Helmholtz equation, \( \Delta = -k^2 u \), at every vertex on the triangulated surface. In discrete exterior calculus, 
             the Helmholtz equation takes the form
 
@@ -103,7 +104,7 @@
             where \(d\) is the exterior derivative, \(\star\) is the Hodge star, and \(k\) is the frequency of the corresponding harmonic mode. Here, 
             \(d\) is a sparse matrix defined using the source and destination of each half edge on the mesh, \(\star_1\) 
             is a sparse diagonal matrix whose non-zero values are the half edge weights, and \(\star_0\) is a sparse diagonal matrix 
-            whose non-zero values are the vertex weights. The computation was performed using the VEX programming language, and the 
+            whose non-zero values are the vertex weights. The computation was performed using VEX and Python, and the 
             graphics were rendered using Houdini. Note: if the bunny were replaced by a spherical geometry, the 
             eigenvectors \(u\) would be the spherical harmonics.
 
