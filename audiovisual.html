@@ -91,11 +91,20 @@
     <br>
     <h3><b>Audiovisual Simulation</b></h3>
 
-      <h5><b>Acoustic Simulation of Complex Geometries</b></h5>
+      <h5><b>Acoustic Simulation for Complex Geometries</b></h5>
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four harmonic modes of the Stanford 
-            bunny. The pressure u was computed for each vertex on the geometry by solving the Helmholtz equation using discrete exterior 
-            calculus.
+            bunny. For each bunny, I computed the displacement \(u\) of the corresponding harmonic mode (plotted in chroma) by numerically solving the 
+            Helmholtz equation, \( \Delta = -k^2 u \), at every vertex on the triangulated surface. Using discrete exterior calculus, 
+            the Helmholtz equation takes the form
+
+            $$(d^T \star_1 d) u = k^2 \star_0 u $$
+            
+            where \(d\) is the exterior derivative, \(\star\) is the Hodge star, and \(k\) is the frequency of the harmonic mode in question. Here, 
+            \(d\) is a sparse matrix defined using the source and destination of each half edge on the mesh, \(\star_1\) 
+            is a sparse diagonal matrix whose non-zero values are the half edge weights, and \(\star_0\) is a sparse diagonal matrix 
+            whose non-zero values are the vertex weights. Note: if the bunny were replaced by a spherical geometry, the 
+            eigenvectors \(u\) would be the spherical harmonics.
 
       </font></div>
       <!-- Rigid bodies&mdash;such as strings, membranes, and plates&mdash;are the basic building blocks of common acoustic systems 
@@ -115,11 +124,36 @@
 
 
 
-      <h5><b>Physics-based Sound Synthesis for Computer Animation</b></h5>
+      <h5><b>Sound Synthesis for Computer Animation</b></h5>
       <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> The images, motion, and sounds of the animation below 
+          were generated entirely by a computer. The images were computed at 60 Hz, the motion was computed at 240 Hz, and the 
+          sounds were computed at 48000 Hz. Each sound event was a pure tone with a volume envelope. From left to right, the spheres 
+          played frequencies of 220 Hz, 440 Hz, and 880 Hz. The computation took the following general form 
+          <br><br>
 
+          
+          for (int i = 0; i < 60; i++) {<br>
+            &emsp;// render new image of falling spheres
+            <br><br>
+            &emsp; for (int j = 0; j < 4; j++) { <br> 
+              &emsp; &emsp; // update sphere motion at 60 \(\times\) 4 = 240 Hz <br> <br>
+              &emsp; &emsp; for (int k = 0; k < numberOfSpheres; k++) { <br>
+              &emsp; &emsp; &emsp;// advance position of each sphere using forward Euler method <br>
+              &emsp; &emsp; &emsp;// initialize new sound event if sphere collides with floor <br>
+              &emsp; <br>
+
+              &emsp; &emsp; &emsp; for (int j = 0; j < 200; j++) { <br>
+                &emsp;&emsp; &emsp; &emsp; // compute audio samples for each sound event at 60 \(\times\) 4 \(\times\) 200 = 48000 Hz <br>
+                &emsp;&emsp; &emsp; }<br>
+                &emsp;&emsp; }<br>
+                &emsp; }<br>
+
+          }
+          <br> <br>
+ 
         </font></div>
+        <br>
           
 
         <iframe class="u-max-full-width" src="https://player.vimeo.com/video/434509270" width="640" height="480" 
