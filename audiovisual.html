@@ -128,8 +128,9 @@
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> The images, motion, and sounds of the animation below 
           were generated entirely by a computer. The images were computed at 60 Hz, the motion was computed at 240 Hz, and the 
-          sounds were computed at 48000 Hz. Each sound event was a pure tone with a volume envelope. From left to right, the spheres 
-          played frequencies of 220 Hz, 440 Hz, and 880 Hz. The computation took the following general form 
+          sounds were computed at 48000 Hz. Each sound event consisted of a pure tone modified by an attack-decay-release (ASR) 
+          volume envelope. From left to right, the spheres played frequencies of 220 Hz, 440 Hz, and 880 Hz. 
+          The computation took the following general form:
           <br><br>
 
           
@@ -143,7 +144,7 @@
               &emsp; &emsp; &emsp;// initialize new sound event if sphere collides with floor <br>
               &emsp; <br>
 
-              &emsp; &emsp; &emsp; for (int j = 0; j < 200; j++) { <br>
+              &emsp; &emsp; &emsp; for (int w = 0; w < 200; w++) { <br>
                 &emsp;&emsp; &emsp; &emsp; // compute audio samples for each sound event at 60 \(\times\) 4 \(\times\) 200 = 48000 Hz <br>
                 &emsp;&emsp; &emsp; }<br>
                 &emsp;&emsp; }<br>
