@@ -95,7 +95,7 @@
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four harmonic modes of the Stanford 
             bunny. For each bunny, I computed the displacement \(u\) of the corresponding harmonic mode (plotted in chroma) by numerically solving the 
-            Helmholtz equation, \( \Delta = -k^2 u \), at every vertex on the triangulated surface. Using discrete exterior calculus, 
+            Helmholtz equation, \( \Delta = -k^2 u \), at every vertex on the triangulated surface. In discrete exterior calculus, 
             the Helmholtz equation takes the form
 
             $$(d^T \star_1 d) u = k^2 \star_0 u $$
@@ -129,13 +129,13 @@
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> The images, motion, and sounds of the animation below 
           were generated entirely by a computer. The images were computed at 60 Hz, the motion was computed at 240 Hz, and the 
           sounds were computed at 48000 Hz. Each sound event consisted of a pure tone modified by an attack-decay-release (ASR) 
-          volume envelope. From left to right, the spheres played frequencies of 220 Hz, 440 Hz, and 880 Hz. 
-          The computation took the following general form:
+          volume envelope. From left to right, the spheres played frequencies of 220 Hz, 440 Hz, and 880 Hz. Following the main computation, 
+          the audio and video were automatically combined using FFmpeg. The main computation took the following general form:
           <br><br>
 
           
           for (int i = 0; i < 60; i++) {<br>
-            &emsp;// render new image of falling spheres
+            &emsp;// render images of falling spheres at 60 Hz
             <br><br>
             &emsp; for (int j = 0; j < 4; j++) { <br> 
               &emsp; &emsp; // update sphere motion at 60 \(\times\) 4 = 240 Hz <br> <br>
