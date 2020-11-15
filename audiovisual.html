@@ -93,11 +93,11 @@
 
       <h5><b>Acoustic Simulation for Complex Geometries</b></h5>
       <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four harmonic modes of the Stanford 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four of the harmonic modes of the Stanford 
             bunny. From left to right, I've plotted the \(0^{th}\), \(1^{st}\), \(2^{nd}\), and \(6^{th}\) modes. I computed the 
-            displacement \(u\) of each mode by numerically solving the Helmholtz equation, \( \Delta = -k^2 u \), at every vertex on 
-            the triangulated surface. The red portions represent regions are the displacement is maximally negative, and purple portions 
-            represent where is maximally positive. In discrete exterior calculus, 
+            displacement \(u\) of each mode by numerically solving the Helmholtz equation, \( \Delta u = -k^2 u \), at every vertex on 
+            the triangulated surface. The purple portions represent regions where the displacement is maximally negative, and the red portions 
+            represent where it is maximally positive. In discrete exterior calculus, 
             the Helmholtz equation takes the form
 
             $$(d^T \star_1 d) u = k^2 \star_0 u $$
@@ -106,8 +106,8 @@
             \(d\) is a sparse matrix defined using the source and destination of each half edge on the mesh, \(\star_1\) 
             is a sparse diagonal matrix whose non-zero values are the half edge weights, and \(\star_0\) is a sparse diagonal matrix 
             whose non-zero values are the vertex weights. The computation was performed using VEX and Python, and the 
-            graphics were rendered using Houdini. Note: if the bunny were replaced by a spherical geometry, the 
-            eigenvectors \(u\) would be the spherical harmonics.
+            graphics were rendered using Houdini. Note: if the bunnies were replaced by spheres, the 
+            eigenvectors \(u\) would be the corresponding real spherical harmonics.
 
       </font></div>
       <!-- Rigid bodies&mdash;such as strings, membranes, and plates&mdash;are the basic building blocks of common acoustic systems 
