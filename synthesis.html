@@ -91,7 +91,10 @@
     <br>
     <h3><b>Physical Modeling Sound Synthesis</b></h3>
 
-    <h5><b>Acoustic Simulation for Complex Geometries</b></h5>
+    <h5><b>Sound Source Simulation</b></h5>
+    <h6><b><i>Complex Soft-Body Geometries</i></b></h6>
+
+    <!-- <h6><b>Acoustic Simulation for Complex Geometries</b></h6> -->
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four of the harmonic modes of the Stanford 
             bunny. From left to right, I've plotted the \(0^{th}\), \(1^{st}\), \(2^{nd}\), and \(6^{th}\) modes. I computed the 
@@ -123,61 +126,16 @@
       <img src="images/bunnies_full.jpeg" style="width:100%">
       </p>
 
-      <hr>
+      <br>
 
-
-
-      <h5><b>Sound Synthesis for Computer Animation</b></h5>
-      <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> The images, motion, and sounds of the animation below 
-          were generated entirely by a computer. The images were computed at 60 Hz, the motion was computed at 240 Hz, and the 
-          sounds were computed at 48,000 Hz. Each sound event consisted of a pure tone modified by an attack-decay-release (ASR) 
-          volume envelope. From left to right in the animation, the spheres played frequencies of 220 Hz, 440 Hz, and 880 Hz. Following the main computation, 
-          the audio and video were automatically combined using FFmpeg. The computation was performed using C++, and the 
-          graphics were rendered using OpenGL. The main computation took the following general form:
-          <br><br>
-
-          
-          for (int i = 0; i < 60; i++) {<br>
-            &emsp;// render images of falling spheres at 60 Hz
-            <br><br>
-            &emsp; for (int j = 0; j < 4; j++) { <br> 
-              &emsp; &emsp; // update sphere motion at 60 \(\times\) 4 = 240 Hz <br> <br>
-              &emsp; &emsp; for (int k = 0; k < numberOfSpheres; k++) { <br>
-              &emsp; &emsp; &emsp;// advance position of each sphere using forward Euler method <br>
-              &emsp; &emsp; &emsp;// initialize new sound event if sphere collides with floor <br>
-              &emsp; <br>
-
-              &emsp; &emsp; &emsp; for (int w = 0; w < 200; w++) { <br>
-                &emsp;&emsp; &emsp; &emsp; // compute audio samples for each sound event at 60 \(\times\) 4 \(\times\) 200 = 48,000 Hz <br>
-                &emsp;&emsp; &emsp; }<br>
-                &emsp;&emsp; }<br>
-                &emsp; }<br>
-
-          }
-          <br> <br>
- 
-        </font></div>
-        <br>
-          
-
-        <iframe class="u-max-full-width" src="https://player.vimeo.com/video/434509270" width="640" height="480" 
-        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-          <br><br>
-          
-      </p>
-
-      <hr>
-
-      <h5><b>Musical Instrument Synthesis</b></h5>
+      <h6><b><i>Musical Instrument Geometries</i></b></h6>
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Strings, membranes, and plates are the basic building 
         blocks of musical instruments. Using modal synthesis and finite-difference time-domain (FDTD) methods, I simulated sounds  
         corresponding to each of these musical instrument objects. In the case of plates, I modeled different materials and 
-        excitation mechanisms. Audio samples of each musical instrument object are provided below. I'm currently in the process of 
-        synchronizing the sounds with computer animations. As preparation, I have graphically rendered musical instruments to use 
-        in these animations (see violin below).
+        excitation mechanisms. Audio samples of each musical instrument object are provided below. For future work, I plan to 
+        integrate the sounds into virtual reality. In preparation, I have graphically rendered musical instruments to use as 
+        interaction models (see violin below).
       </font></div>
       <!-- Rigid bodies&mdash;such as strings, membranes, and plates&mdash;are the basic building blocks of common acoustic systems 
         in computer animation, including musical instruments 
@@ -217,11 +175,62 @@
       <img src="images/violin_render.png" style="width:100%">
       </p>
 
+      <br>
       <hr>
 
 
 
-      <h5><b>Speech Synthesis</b></h5>
+      <h5><b>Wave Propagation Synthesis</b></h5>
+
+      <h6><b><i>Room Acoustics</i></b></h6>
+          <p> 
+            <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">I modeled room reverberation using the image-source method. The model simulates the impulse response of a
+            room and then convolves the impulse response with the original input audio in the time domain. For simplicity,
+            I assumed that the walls of the room were flat and positioned perpendicular to each other.
+            
+            <br> <br>
+            
+            The equation that defines the magnitude \(g\) of each impulse in the simulated impulse response takes the form
+            
+            $$g = {(\sqrt{1-\alpha})^w \over l}$$
+            
+            where \(\alpha\) is the absorption coefficient of the walls, \(w\) is the total number of collisions between the 
+            sound wave and the walls for each image source, and \(l\) is the total distance between the receiver and each 
+            image source. (Note that high absorption values correspond to low reverberant rooms). The MATLAB 
+            <a href="https://github.com/chadmckell/ImageSourceBasic" target="_blank"><b>code</b></a> for my reverb model is available on my GitHub
+            page.
+          </font></div>
+          </p>
+
+        <table style='border:none;'>
+          <tr>
+            <td>Dry</td>
+            <td>
+              <audio controls>
+                <source src="audio/guitar_dry.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>High Absorption</td> 
+            <td>
+              <audio controls>
+                <source src="audio/reverb_high.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Low Absorption</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_low.wav" type="audio/wav">
+              </audio>
+            </td>
+          </tr>
+        </table>
+  
+
+      <h6><b><i>Vocal Tract Propagation</i></b></h6>
       <p> 
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Wolfgang von Kempelen created the first known speech synthesizer in 1791. The device used a variety of parts to 
           imitate human speech&mdash;a bellows for the lungs, a reed for the vocal folds, tubes for the various vocal-tract geometries, 
@@ -280,60 +289,53 @@
                 </font></div>
       </p>
 
+      <br>
       <hr>
 
-      <h5><b>Room Acoustics</b></h5>
-          <p> 
-            <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">I modeled room reverberation using the image-source method. The model simulates the impulse response of a
-            room and then convolves the impulse response with the original input audio in the time domain. For simplicity,
-            I assumed that the walls of the room were flat and positioned perpendicular to each other.
-            
-            <br> <br>
-            
-            The equation that defines the magnitude \(g\) of each impulse in the simulated impulse response takes the form
-            
-            $$g = {(\sqrt{1-\alpha})^w \over l}$$
-            
-            where \(\alpha\) is the absorption coefficient of the walls, \(w\) is the total number of collisions between the 
-            sound wave and the walls for each image source, and \(l\) is the total distance between the receiver and each 
-            image source. (Note that high absorption values correspond to low reverberant rooms). The MATLAB 
-            <a href="https://github.com/chadmckell/ImageSourceBasic" target="_blank"><b>code</b></a> for my reverb model is available on my GitHub
-            page.
-          </font></div>
-          </p>
 
-        <table style='border:none;'>
-          <tr>
-            <td>Dry</td>
-            <td>
-              <audio controls>
-                <source src="audio/guitar_dry.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-          <tr>
-            <td>High Absorption</td> 
-            <td>
-              <audio controls>
-                <source src="audio/reverb_high.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-          <tr>
-            <td>Low Absorption</td>
-            <td>
-              <audio controls>
-                <source src="audio/reverb_low.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-        </table>
-  
+      <h5><b>Sound Synthesis for Computer Animation</b></h5>
+      <p> 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> The images, motion, and sounds of the animation below 
+          were generated entirely by a computer. The images were computed at 60 Hz, the motion was computed at 240 Hz, and the 
+          sounds were computed at 48,000 Hz. Each sound event consisted of a pure tone modified by an attack-decay-release (ASR) 
+          volume envelope. From left to right in the animation, the spheres played frequencies of 220 Hz, 440 Hz, and 880 Hz. Following the main computation, 
+          the audio and video were automatically combined using FFmpeg. The computation was performed using C++, and the 
+          graphics were rendered using OpenGL. The main computation took the following general form:
+          <br><br>
+
+          
+          for (int i = 0; i < 60; i++) {<br>
+            &emsp;// render images of falling spheres at 60 Hz
+            <br><br>
+            &emsp; for (int j = 0; j < 4; j++) { <br> 
+              &emsp; &emsp; // update sphere motion at 60 \(\times\) 4 = 240 Hz <br> <br>
+              &emsp; &emsp; for (int k = 0; k < numberOfSpheres; k++) { <br>
+              &emsp; &emsp; &emsp;// advance position of each sphere using forward Euler method <br>
+              &emsp; &emsp; &emsp;// initialize new sound event if sphere collides with floor <br>
+              &emsp; <br>
+
+              &emsp; &emsp; &emsp; for (int w = 0; w < 200; w++) { <br>
+                &emsp;&emsp; &emsp; &emsp; // compute audio samples for each sound event at 60 \(\times\) 4 \(\times\) 200 = 48,000 Hz <br>
+                &emsp;&emsp; &emsp; }<br>
+                &emsp;&emsp; }<br>
+                &emsp; }<br>
+
+          }
+          <br> <br>
+ 
+        </font></div>
+        <br>
+          
+
+        <iframe class="u-max-full-width" src="https://player.vimeo.com/video/434509270" width="640" height="480" 
+        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+          <br><br>
+          
+      </p>
 
     </div>
   </div>
-
-
 
 
 <!--
