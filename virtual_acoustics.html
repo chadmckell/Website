@@ -89,104 +89,36 @@
      
  
     <br>
-    <h3><b>Physical Modeling Sound Synthesis</b></h3>
+    <h3><b>Virtual Acoustics</b></h3>
 
-    <h5><b>Complex Soft-Body Geometries</b></h5>
-
-    <!-- <h5><b>Sound Source Simulation</b></h5>
-    <h6><b><i>Complex Soft-Body Geometries</i></b></h6> -->
-
-    <!-- <h6><b>Acoustic Simulation for Complex Geometries</b></h6> -->
+    <h5><b>Spatial Audio</b></h5>
+    
       <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> Below is an image of four of the harmonic modes of the Stanford 
-            bunny. From left to right, I've plotted the \(0^{th}\), \(1^{st}\), \(2^{nd}\), and \(6^{th}\) modes. I computed the 
-            displacement \(u\) of each mode by numerically solving the Helmholtz equation, \( \Delta u = -k^2 u \), at every vertex on 
-            the triangulated surface. The purple portions represent regions where the displacement is maximally negative, and the red portions 
-            represent where it is maximally positive. In discrete exterior calculus, 
-            the Helmholtz equation takes the form
-
-            $$(d^T \star_1 d) u = k^2 \star_0 u $$
-            
-            where \(d^T \star_1 d\) is the discrete Laplacian, \(\star_0\) is the mass matrix, and \(k\) is the wave number of the harmonic mode. Here, 
-            \(d\) is a sparse matrix defined using the source and destination of each half edge on the mesh, \(\star_1\) 
-            is a sparse diagonal matrix whose non-zero values are the half edge weights, and \(\star_0\) is a sparse diagonal matrix 
-            whose non-zero values are the vertex weights. The computation was performed using VEX and Python, and the 
-            graphics were rendered using Houdini. Note: if the bunnies were replaced by spheres, the 
-            eigenvectors \(u\) would be the corresponding real spherical harmonics.
-
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> 
+          Binaural audio technology is a set of recording or simulation tools 
+          used to create three- dimensional sounds through a two-channel sound 
+          system such as headphones. To produce the sounds of swarming bees 
+          around your head, for example, a person can record the bee sounds 
+          using microphones placed in the left and right ears of an artificial 
+          head and then play back the recording through headphones. Alternatively, 
+          we can simulate how the non-spatialized (free-field) sounds created by 
+          the bees are filtered by a human head and torso and then play that 
+          filtered signal through headphones. This binaural filtering function is 
+          known as the head-related transfer function (HRTF).
       </font></div>
-      <!-- Rigid bodies&mdash;such as strings, membranes, and plates&mdash;are the basic building blocks of common acoustic systems 
-        in computer animation, including musical instruments 
-
-        Various physical modeling schemes exist for simulating these objects, including modal 
-        synthesis and finite-difference time-domain (FDTD) methods. I simulated several categories of object vibrations by solving for 
-        the displacement of a point located on the object over time using one of these methods.
       
-      -->
       <br>
      
-      <img src="images/bunnies_full.jpeg" style="width:100%">
+      <img src="images/hrtf.png" style="width:100%">
       </p>
 
       <br>
 
-      <h5><b>Musical Instruments</b></h5>
-
-      <!-- <h6><b><i>Musical Instrument Geometries</i></b></h6> -->
-      <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Strings, membranes, and plates are the basic building 
-        blocks of musical instruments. Using modal synthesis and finite-difference time-domain (FDTD) methods, I simulated sounds  
-        corresponding to each of these musical instrument objects. In the case of plates, I modeled different materials and 
-        excitation mechanisms. Audio samples of each musical instrument object are provided below. For future work, I plan to 
-        integrate the sounds into virtual reality. In preparation, I have graphically rendered musical instruments to use as 
-        interaction models (see violin below).
-      </font></div>
-      <!-- Rigid bodies&mdash;such as strings, membranes, and plates&mdash;are the basic building blocks of common acoustic systems 
-        in computer animation, including musical instruments 
-
-        Various physical modeling schemes exist for simulating these objects, including modal 
-        synthesis and finite-difference time-domain (FDTD) methods. I simulated several categories of object vibrations by solving for 
-        the displacement of a point located on the object over time using one of these methods.
-      
-      -->
-      <br>
-      <table style='border:none;'>
-        <tr>
-          <td>String</td>
-          <td>
-            <audio controls>
-              <source src="audio/string_fdtd.wav" type="audio/wav">
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <td>Membrane</td>
-          <td>
-            <audio controls>
-              <source src="audio/membrane.wav" type="audio/wav">
-            </audio>
-          </td>
-        </tr>
-          <tr>
-            <td>Plate</td>
-            <td>
-              <audio controls>
-                <source src="audio/plate_metal.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-      </table>
-      <img src="images/violin_render.png" style="width:100%">
-      </p>
-
-      <br>
-      <!-- <hr> -->
+     
 
 
 
-      <!-- <h5><b>Wave Propagation Synthesis</b></h5>
-
-      <h6><b><i>Room Acoustics</i></b></h6>
+      <h5><b>Room Acoustics</b></h5>
           <p> 
             <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">I modeled room reverberation using the image-source method. The model simulates the impulse response of a
             room and then convolves the impulse response with the original input audio in the time domain. For simplicity,
@@ -231,111 +163,17 @@
               </audio>
             </td>
           </tr>
-        </table> -->
+        </table>
   
 
-        <h5><b>Speech</b></h5>
-
-      <!-- <h6><b><i>Vocal Tract Propagation</i></b></h6> -->
-      <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Wolfgang von Kempelen created the first known speech synthesizer in 1791. The device used a variety of parts to 
-          imitate human speech&mdash;a bellows for the lungs, a reed for the vocal folds, tubes for the various vocal-tract geometries, 
-          and so on. By reproducing the subtleties of linguistic sounds from observations of the acoustic and physiological 
-          mechanisms of speech, Kempelen set the stage for more advanced speech synthesis techniques that would emerge 
-          centuries later.
-          
-          <br> <br>
-
-          Physical modeling speech synthesis is a computational approach to artificial voice production that generates 
-          acoustic sounds by numerically solving a mathematical model of speech. As part of my special project 
-          <a href="/pdf/speech_2017.pdf" target="_blank"><b>dissertation</b></a> in Acoustics and Music Technology at the University of Edinburgh, 
-          I developed physical modeling simulations of vocal-tract sound propagation by solving Webster's equation with
-          finite-difference time-domain (FDTD) methods. For another course project, I also created a unit selection speech 
-          synthesizer, which concatenates individual diphones of speech. Code from my 
-          <a href="https://github.com/chadmckell/FDTDSpeech" target="_blank"><b>FDTD</b></a> and <a href="https://github.com/chadmckell/UnitSpeech" target="_blank"><b>unit selection</b></a>
-          speech synthesizers is available on my GitHub page. To demonstrate my simulations, I used the English phrase <i>I owe you a yo-yo</i>.
-          I chose this phrase because it contains only vowels and diphthongs. Other speech sounds, like consonants
-          and glottal fry, were left for future research. Similar to musical instrument synthesis discussed above, I plan to synchronize 
-          speech sounds with facial animations.
-          <br><br>
-          <!-- Similar to musical instrument synthesis discussed above, I plan to synchronize speech sounds with facial animations. I have built 
-          simple character rigs (like the rig of a dragon shown below) to use in this research. -->
-        </font></div>
-          <br>
-          <table style='border:none;'>
-            <tr>
-              <td>FDTD Speech</td>
-              <td>
-                <audio controls>
-                  <source src="audio/speech_fdtd_quiet.wav" type="audio/wav">
-                </audio>
-              </td>
-            </tr>
-            <tr>
-              <td>Unit Selection</td>
-              <td>
-                <audio controls>
-                  <source src="audio/speech_unit.wav" type="audio/wav">
-                </audio>
-              </td>
-            </tr>
-  
-          </table>
   
 
-          <!-- <img src="images/dragon_render.png" style="width:100%"> -->
-
-          <!-- <br><br> -->
-          <font color="grey">
-          <h6><b>References</b></h6>
-          <div style="LINE-HEIGHT:18px; text-align:left">
-                 <ol>
-                  <li><b>C. McKell</b>. <i>Finite-Difference Simulations of Speech with Wall Vibration Losses </i>, Special Project Master's Dissertation, University of Edinburgh, Acoustics and Audio Group, April 2017. [<a href="/pdf/speech_2017.pdf"  target="_blank"><b>paper</b></a>]</li> 
-                </ol>
-                </font></div>
-      </p>
-
-      <br>
-      <!-- <hr> -->
+         
+    
 
 
-      <h5><b>Sound Synthesis for Computer Animation</b></h5>
-      <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey"> The images, motion, and sounds of the animation below 
-          were generated entirely by a computer. The images were computed at 60 Hz, the motion was computed at 240 Hz, and the 
-          sounds were computed at 48,000 Hz. Each sound event consisted of a pure tone modified by an attack-decay-release (ASR) 
-          volume envelope. From left to right in the animation, the spheres played frequencies of 220 Hz, 440 Hz, and 880 Hz. Following the main computation, 
-          the audio and video were automatically combined using FFmpeg. The computation was performed using C++, and the 
-          graphics were rendered using OpenGL. The main computation took the following general form:
-          <br><br>
-
-          
-          for (int i = 0; i < 60; i++) {<br>
-            &emsp;// render images of falling spheres at 60 Hz
-            <br><br>
-            &emsp; for (int j = 0; j < 4; j++) { <br> 
-              &emsp; &emsp; // update sphere motion at 60 \(\times\) 4 = 240 Hz <br> <br>
-              &emsp; &emsp; for (int k = 0; k < numberOfSpheres; k++) { <br>
-              &emsp; &emsp; &emsp;// advance position of each sphere using forward Euler method <br>
-              &emsp; &emsp; &emsp;// initialize new sound event if sphere collides with floor <br>
-              &emsp; <br>
-
-              &emsp; &emsp; &emsp; for (int w = 0; w < 200; w++) { <br>
-                &emsp;&emsp; &emsp; &emsp; // compute audio samples for each sound event at 60 \(\times\) 4 \(\times\) 200 = 48,000 Hz <br>
-                &emsp;&emsp; &emsp; }<br>
-                &emsp;&emsp; }<br>
-                &emsp; }<br>
-
-          }
-          <br> <br>
- 
-        </font></div>
-        <br>
-          
-
-        <iframe class="u-max-full-width" src="https://player.vimeo.com/video/434509270" width="640" height="480" 
-        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
+      
+         
           <br><br>
           
       </p>
