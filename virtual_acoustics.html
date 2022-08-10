@@ -148,10 +148,13 @@
             image source. (Note that high absorption values correspond to low reverberant rooms). The MATLAB 
             <a href="https://github.com/chadmckell/ImageSourceBasic" target="_blank"><b>code</b></a> for my reverb model is available on my GitHub
             page.
+
+            -->
+
           </font></div>
           </p>
 
-        <table style='border:none;'>
+        <!-- <table style='border:none;'>
           <tr>
             <td>Dry</td>
             <td>
@@ -176,258 +179,27 @@
               </audio>
             </td>
           </tr>
-        </table> -->
+        </table> --> 
   
-
-  
-
-         
-    
-
-
-      
-         
           <br><br>
           
-      </p>
-
-    </div>
-  </div>
-
-
-<!--
-<div class="section">
-    <div class="container">
-      <div class="one-half column">
-        <br>
-        <h4><b>Sound Synthesis for Animation</b></h4>
-        <h5><b>String Synthesis</b></h5>
-          <p> 
-            <div style="LINE-HEIGHT:16px; text-align:left"><font color="grey">Strings are the basic building blocks of many musical instruments, including guitars, violins, and dulcimers.
-            Various physical modeling schemes exist for modeling strings, such as the Karplus-Strong technique,
-            modal synthesis, and finite-difference time-domain (FDTD) methods. The displacement \(u = u(x, t)\) of a lossy 
-            forced string of finite length \(L\) and fixed boundary conditions is described by the 1D wave equation
-            with loss and forcing 
-            
-            $$u_{tt} = c^2 u_{xx} - 2\sigma_0 u_t + \delta F$$
-
-            where \(c\) is the speed of sound in the string, \(\sigma_0\) is a non-negative damping constant, 
-            \(\delta = \delta(x-x_i)\) is the 1D delta function centered at the excitation location \(x_i\), and \(F\) is the 
-            time-dependent forcing signal.
-            
-            <br> <br>
-            
-            I modeled string vibrations by solving for the displacement \(u\) using FDTD and modal synthesis. For 
-            comparison, I also simulated string vibrations using the Karplus-Strong (KS) approach, which 
-            implements delays to approximate the vibrations.
-          </font></div>
-          </p>
-      </div>
-      <div class="one-half column">
-        <br> <br> <br><br>
-        <img src="images/string.png" style="width:85%">
-        <video width="500" height="300" loop autoplay>
-        <source src="video/string.mp4" type="video/mp4">
-        </video>
-        <table>
-          <tr>
-            <td>FDTD</td>
-            <td>
-              <audio controls>
-                <source src="audio/string_fdtd.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-          <tr>
-            <td>Modal</td>
-            <td>
-              <audio controls>
-                <source src="audio/string_modal.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-          <tr>
-            <td>KS</td>
-            <td>
-              <audio controls>
-                <source src="audio/string_ks.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-    </div>
-  </div>
-  
-  
-    <div class="section">
-    <div class="container">
-      <div class="one-half column">
-        <h5><b>Membrane Synthesis</b></h5>
-          <p> 
-            <div style="LINE-HEIGHT:16px; text-align:left"><font color="grey">Percussion instruments like kick drums and toms are made of membranes. The displacement \(u = u(x,y,t)\) of a lossy 
-            forced rectangular membrane of finite dimensions \(L_x \times L_y\) and fixed boundary conditions is described by
-            the 2D wave equation with loss and forcing
-            
-            $$u_{tt} = c^2 \Delta u - 2\sigma_0 u_t + \delta F$$
-            
-            where \(c\) is the speed of sound in the membrane, \(\sigma_0\) is a non-negative damping constant, 
-            \(\delta = \delta(x-x_i, y-y_i)\) is the 2D delta function centered at the excitation location \((x_i, y_i)\), 
-            and \(F\) is the time-dependent forcing signal. I used modal synthesis to simulate vibrations from a membrane.</font></div>
-          </p>
-      </div>
-      <div class="one-half column">
-        <br> <br> 
-        <img src="images/membrane.jpg" style="width:85%">
-        <video width="500" height="300" loop autoplay>
-        <source src="video/membrane.mp4" type="video/mp4">
-        </video>
-        <table>
-          <tr>
-            <td>Membrane</td>
-            <td>
-              <audio controls>
-                <source src="audio/membrane.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="container">
-      <div class="one-half column">
-        <h5><b>Plate Synthesis</b></h5>
-          <p> 
-            <div style="LINE-HEIGHT:16px; text-align:left"><font color="grey">Many musical instruments are made of plates. For example, the soundboard of a piano and the fretboard of a guitar
-            can both be modeled as rectangular plates. The displacement \(u = u(x,y,t)\) of a lossy forced rectangular plate 
-            of finite dimensions \(L_x \times L_y\) and fixed boundary conditions is described by the Kirchhoff thin plate 
-            equation with loss and forcing
-            
-            $$u_{tt} = -\kappa^2 \Delta \Delta u - 2\sigma_0 u_t + \delta F$$
-            
-            where \(\kappa\) is the stiffness parameter, \(\sigma_0\) is a non-negative damping constant, 
-            \(\delta = \delta(x-x_i, y-y_i)\) is the 2D delta function centered at the excitation location \((x_i, y_i)\), 
-            and \(F\) is the time-dependent forcing signal.
-            
-            I used modal synthesis to simulate vibrations from plates made of different materials, such as metal and wood. 
-            I also modeled different excitations, including impulses and scratches.</font></div>
-          </p>
-      </div>
-      <div class="one-half column">
-        <br> <br>
-        <img src="images/plate.png" style="width:85%">
-        <video width="500" height="300" loop autoplay>
-        <source src="video/plate.mp4" type="video/mp4">
-        </video>
-        <table>
-          <tr>
-            <td>Metal</td>
-            <td>
-              <audio controls>
-                <source src="audio/plate_metal.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-          <tr>
-            <td>Wood</td> 
-            <td>
-              <audio controls>
-                <source src="audio/plate_wood.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-        </table>
-      </div>
     </div>
   </div>
 
 
 
 
+  <br> 
 
 
-  <div class="section">
-    <div class="container">
-      <div class="one-half column">
-        <h5><b>Speech Synthesis</b></h5>
-          <p> 
-            <div style="LINE-HEIGHT:16px; text-align:left"><font color="grey">Wolfgang von Kempelen created the first known speech synthesizer in 1791. The device used a variety of parts to 
-              imitate human speech&mdash;a bellows for the lungs, a reed for the vocal folds, tubes for the various vocal-tract geometries, 
-              and so on. By reproducing the subtleties of linguistic sounds from observations of the acoustic and physiological 
-              mechanisms of speech, Kempelen set the stage for more advanced speech synthesis techniques that would emerge 
-              centuries later.
-              
-              <br> <br>
-  
-              Physical modeling speech synthesis is a computational approach to artificial voice production that generates 
-              acoustic sounds by numerically solving a mathematical model of speech. As part of my special project 
-              <a href="/pdf/speech_2017.pdf">dissertation</a> in Acoustics and Music Technology at the University of Edinburgh, 
-              I developed physical modeling simulations of vocal-tract sound propagation by solving Webster's equation with
-              finite-difference time-domain (FDTD) methods. For another course project, I also created a unit selection (US) speech 
-              synthesizer, which concatenates individual diphones of speech. Code from my 
-              <a href="https://github.com/chadmckell/FDTDSpeech">FDTD</a> and <a href="https://github.com/chadmckell/UnitSpeech">unit selection</a>
-              speech synthesizers is available on my GitHub page.
-              
-              <br> <br>
-              
-              To demonstrate my simulations, I used the English phrase 
-              
-              <br><br>
-             
-              <center><i>I owe you a yo-yo.</i></center> 
-              
-              <br>
-              
-              I chose this phrase because it contains only vowels and diphthongs. Other speech sounds, like consonants
-              and glottal fry, were reserved for future research.</font></div>
-          </p>
-      </div>
-
-      <div class="one-half column">
-        <br> <br> 
-        <img src="images/speech.jpg" style="width:85%">
-        <table>
-          <tr>
-            <td>FDTD</td>
-            <td>
-              <audio controls>
-                <source src="audio/speech_fdtd_quiet.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-          <tr>
-            <td>US</td>
-            <td>
-              <audio controls>
-                <source src="audio/speech_unit.wav" type="audio/wav">
-              </audio>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
+  <div class="footer"> 
+    <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
+    <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
+    <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+    <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
+    <br> <br>
+    <font color="white">Copyright &copy 2009&ndash;2022. Chad McKell. All Rights Reserved.</font>
   </div>
--->
-
-
-
-
-<br>
-
-<div class="footer"> 
-  <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
-  <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
-  <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
-  <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
-  <br> <br>
-  <font color="white">Copyright &copy 2009&ndash;2022. Chad McKell. All Rights Reserved.</font>
-</div>
-
-</body>
-</html>
+  
+  </body>
+  </html>
