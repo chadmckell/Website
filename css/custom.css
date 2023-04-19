@@ -182,6 +182,12 @@ table {
   text-align: left;
 }
 
+.section2 {
+  background-color: white;  
+  padding: 0px 0px;
+  text-align: center;
+}
+
 /* Reference for linear gradient: https://stackoverflow.com/questions/26621513/darken-css-background-image */
 .footer {
   /* background-color: rgb(128, 133, 146);   */
@@ -246,7 +252,19 @@ p.course-content {
   display: block;
 }
 
+p.course-content2 {
+  display: block;
+}
+
 p.course-content-mobile {
+  display: none;
+}
+
+p.course-content-mobile2 {
+  display: none;
+}
+
+p.course-content-large {
   display: none;
 }
 
@@ -334,10 +352,11 @@ p.course-content-mobile {
    }
 
 
+
    /* Reference: https://css-tricks.com/fluid-width-video/ */
   .video-container {
     position: relative;
-    padding-top: 85%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 100%;
   }
@@ -348,6 +367,49 @@ p.course-content-mobile {
     width: 100%;
     height: 100%;
   }
+
+  .parent {
+    position: relative;
+    padding-top: 65.7%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    overflow: hidden;
+    width: 100%;
+    background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat;
+    background-position: 8% 50%;
+    background-size: 35%;
+    background-color:  rgba(0, 0, 0, 0.14);
+
+
+
+  }
+
+.home-cv {
+  position: absolute;
+  white-space: nowrap;
+  top: 88%;
+  left: 22.6%;
+  transform: translate(-50%, -50%);
+}
+
+
+.home-bio {
+  position: absolute;
+  white-space: nowrap;
+  top: 35%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/* Reference: https://stackoverflow.com/questions/2906582/how-do-i-create-an-html-button-that-acts-like-a-link */
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: #a9cbfd;
+  text-decoration: none;
+  /* color: rgb(255, 255, 255); */
+}
+
+
 
 
   /* Reference: https://css-tricks.com/responsive-iframes/ */
@@ -375,6 +437,23 @@ p.course-content-mobile {
   }
 
 
+  @media only screen and (min-width: 1250px){
+
+ 
+   p.course-content-large {
+     display: block;
+   }
+ 
+   p.course-content2 {
+     display: none;
+   }
+ 
+   p.course-content-mobile2 {
+     display: none;
+   }
+   
+ }
+
 @media only screen and (max-width: 1250px){
 
 
@@ -386,6 +465,7 @@ p.course-content-mobile {
   audio { 
     width: 210px; 
   }
+
   
 }
 
@@ -409,6 +489,10 @@ p.course-content-mobile {
 
   .section {
     padding: 2px 2px;
+  }
+
+  .section2 {
+    padding: 0px 0px;
   }
 
 
@@ -546,6 +630,34 @@ p.course-content-mobile {
   
 }
 
+@media only screen and (max-width: 570px){
+
+  p.course-content-mobile2 {
+    display: block;
+  }
+
+  p.course-content-large {
+    display: none;
+  }
+
+  p.course-content2 {
+    display: none;
+  }
+
+  .parent {
+    position: relative;
+    padding-top: 67.7%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    background-position: 10% 54%;
+    background-size: 32%;
+
+  }
+
+  .home-cv {
+    top: 83%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 @media only screen and (max-width: 500px){
 
@@ -589,6 +701,8 @@ p.course-content-mobile {
   .split {
     width: 100%;
   }
+
+  
 }
 
 
@@ -601,6 +715,10 @@ p.course-content-mobile {
   td {
     width: 100%;
   }
+
+  
+
+
 }
 
 
