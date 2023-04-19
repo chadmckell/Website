@@ -104,6 +104,8 @@
   .two-thirds.column              { width: 65.3333333333%; }
 
   .one-half.column                { width: 48%; }
+  .one-half2.column               { width: 50%; margin-left: 0%;}
+
 
   /* Offsets */
   .offset-by-one.column,
@@ -138,6 +140,8 @@
   .offset-by-one-half.columns     { margin-left: 52%; }
 
 }
+
+
 
 
 /* Base Styles
