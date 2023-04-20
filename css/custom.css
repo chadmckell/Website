@@ -264,10 +264,6 @@ p.course-content-mobile2 {
   display: none;
 }
 
-p.course-content-large {
-  display: none;
-}
-
 
 /* Reference: https://stackoverflow.com/questions/32296136/underlining-lines-in-full-width-not-only-text */
 .underline{
@@ -399,15 +395,7 @@ p.course-content-large {
   transform: translate(-50%, -50%);
 }
 
-/* Reference: https://stackoverflow.com/questions/2906582/how-do-i-create-an-html-button-that-acts-like-a-link */
-a.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  background-color: #a9cbfd;
-  text-decoration: none;
-  /* color: rgb(255, 255, 255); */
-}
+
 
 
 
@@ -437,23 +425,6 @@ a.button {
   }
 
 
-  @media only screen and (min-width: 1650px){
-
- 
-   p.course-content-large {
-     display: block;
-   }
- 
-   p.course-content2 {
-     display: none;
-   }
- 
-   p.course-content-mobile2 {
-     display: none;
-   }
-   
- }
-
 @media only screen and (max-width: 1250px){
 
 
@@ -468,6 +439,7 @@ a.button {
 
   
 }
+
 
 
 
@@ -634,10 +606,6 @@ a.button {
 
   p.course-content-mobile2 {
     display: block;
-  }
-
-  p.course-content-large {
-    display: none;
   }
 
   p.course-content2 {
