@@ -204,19 +204,19 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
-  padding: 0 30px;
-  color: #555;
+  padding: 0 20px;
+  color: rgb(48, 50, 182);
   text-align: center;
-  font-size: 11px;
-  font-weight: 600;
+  /* font-size: 15px; */
+  /* font-weight: 600; */
   line-height: 38px;
   letter-spacing: .1rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
+  border-radius: 3px;
+  border: 1px solid rgb(48, 50, 182);
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -229,8 +229,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
+  color: #F03F69;
+  border-color: #F03F69;
   outline: 0; }
 .button.button-primary,
 button.button-primary,
@@ -433,6 +433,19 @@ on small devices, paste the mobile query code up in the buttons section and styl
 there.
 */
 
+
+@media (max-width: 570px) {
+  .button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  line-height: 30px;
+  height: 30px;
+  padding: 0 16px;
+}
+
+}
 
 /* Larger than mobile */
 @media (min-width: 450px) {}
