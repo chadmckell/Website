@@ -356,7 +356,7 @@ p.course-content-mobile3 {
    /* Reference: https://css-tricks.com/fluid-width-video/ */
   .video-container {
     position: relative;
-    padding-top: 65%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 68%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 100%;
   }
@@ -370,7 +370,7 @@ p.course-content-mobile3 {
 
   .parent {
     position: relative;
-    padding-top: 129.3%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 132.4%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 325.8%;
     /* background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat; */
