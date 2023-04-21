@@ -264,6 +264,10 @@ p.course-content-mobile2 {
   display: none;
 }
 
+p.course-content-mobile3 {
+  display: none;
+}
+
 
 /* Reference: https://stackoverflow.com/questions/32296136/underlining-lines-in-full-width-not-only-text */
 .underline{
@@ -352,7 +356,7 @@ p.course-content-mobile2 {
    /* Reference: https://css-tricks.com/fluid-width-video/ */
   .video-container {
     position: relative;
-    padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 65%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 100%;
   }
@@ -366,32 +370,25 @@ p.course-content-mobile2 {
 
   .parent {
     position: relative;
-    padding-top: 65.7%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 129.3%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
-    width: 100%;
-    background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat;
-    background-position: 8% 50%;
-    background-size: 35%;
+    width: 325.8%;
+    /* background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat; */
+    /* background-position: 11% 30%; */
+    /* background-size: 14%; */
     background-color:  rgba(0, 0, 0, 0.14);
 
 
 
   }
 
-.home-cv {
-  position: absolute;
-  white-space: nowrap;
-  top: 89%;
-  left: 22.6%;
-  transform: translate(-50%, -50%);
-}
 
 
 .home-bio {
   position: absolute;
   white-space: nowrap;
-  top: 35%;
-  left: 70%;
+  top: 54%;
+  left: 16.6%;
   transform: translate(-50%, -50%);
 }
 
@@ -437,10 +434,46 @@ p.course-content-mobile2 {
     width: 210px; 
   }
 
+
+.home-bio {
+  top: 60%;
+}
+
   
 }
 
 
+@media only screen and (max-width: 1000px){
+
+  .parent {
+    width: 100%;
+    padding-top: 45%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat;
+    background-position: 11% 74%;
+    background-size: 30%;
+    background-color:  rgba(0, 0, 0, 0.14);
+
+  }
+
+  .home-bio {
+    top: 54%;
+    left: 70%;
+  }
+
+  p.course-content2 {
+    display: none;
+  }
+  
+  p.course-content-mobile2 {
+    display: block;
+  }
+
+  p.course-content-mobile3 {
+    display: none;
+  }
+
+
+}
 
 
 /* Do the following for mobile devices */
@@ -457,6 +490,18 @@ p.course-content-mobile2 {
     position: absolute;
   }
   */
+
+  .parent {
+    background-position: 11% 66%;
+    padding-top: 60%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  
+
+  .home-bio {
+    top: 58%;
+  }
+  
   
 
   .section {
@@ -604,21 +649,6 @@ p.course-content-mobile2 {
 
 @media only screen and (max-width: 570px){
 
-  p.course-content-mobile2 {
-    display: block;
-  }
-
-  p.course-content2 {
-    display: none;
-  }
-
-  .parent {
-    position: relative;
-    padding-top: 67.7%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    background-position: 10% 54%;
-    background-size: 32%;
-
-  }
 
   .home-cv {
     top: 83%;
@@ -684,7 +714,28 @@ p.course-content-mobile2 {
     width: 100%;
   }
 
+  .parent {
+    background-position: 11% 73%;
+    background-size: 30%;
+
+  }
+
+  .home-bio {
+    top: 63%;
+    left: 70%;
+  }
+
+  p.course-content2 {
+    display: none;
+  }
   
+  p.course-content-mobile2 {
+    display: none;
+  }
+
+  p.course-content-mobile3 {
+    display: block;
+  }
 
 
 }
