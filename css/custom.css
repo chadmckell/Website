@@ -356,9 +356,10 @@ p.course-content-mobile3 {
    /* Reference: https://css-tricks.com/fluid-width-video/ */
   .video-container {
     position: relative;
-    padding-top: 69%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 100%;
+    top: 60px;
   }
   .video-container iframe {
     position: absolute;
@@ -370,12 +371,13 @@ p.course-content-mobile3 {
 
   .parent {
     position: relative;
-    padding-top: 133.5%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 119.3%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 325.8%;
     background-image: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url("https://chadmckell.com/images/ocean1.jpg");
-    background-position: 40% 5%;
+    background-position: 30% 5%;
     background-size: 150%;
+    top: 60px;
     /* background-color:  rgba(210, 152, 82, 0.318); */
 
 
@@ -387,7 +389,7 @@ p.course-content-mobile3 {
 .home-bio {
   position: absolute;
   white-space: nowrap;
-  top: 54%;
+  top: 52%;
   left: 16.6%;
   transform: translate(-50%, -50%);
 }
@@ -395,7 +397,7 @@ p.course-content-mobile3 {
 .home-bio-pic {
   position: absolute;
   white-space: nowrap;
-  top: 62%;
+  top: 52%;
   left: 25%;
   transform: translate(-50%, -50%);
 }
@@ -404,7 +406,7 @@ p.course-content-mobile3 {
 .home-bio-pic2 {
   position: absolute;
   white-space: nowrap;
-  top: 68%;
+  top: 55%;
   left: 25%;
   transform: translate(-50%, -50%);
 }
@@ -455,7 +457,7 @@ p.course-content-mobile3 {
 
 
 .home-bio {
-  top: 58%;
+  top: 54%;
 }
 
   
@@ -470,11 +472,11 @@ p.course-content-mobile3 {
     /* background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat; */
     background-position: 0% 10%;
     background-size: 180%;
-
+    top: 61px;
   }
 
   .home-bio {
-    top: 54%;
+    top: 44%;
     left: 70%;
   }
 
@@ -510,20 +512,21 @@ p.course-content-mobile3 {
   */
 
   .parent {
-    background-position: 11% 66%;
-    padding-top: 60%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    background-position: 0% 0%;
+    background-position: 0% 10%;
+    padding-top: 54%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     background-size: 180%;
   }
 
   
 
   .home-bio {
-    top: 55%;
+    top: 44%;
   }
 
   
-  
+  .home-bio-pic {
+    top: 52%;
+  }
 
   .section {
     padding: 2px 2px;
@@ -736,14 +739,11 @@ p.course-content-mobile3 {
   }
 
   .parent {
-    background-position: 11% 66%;
-    padding-top: 60%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    background-position: 0% 0%;
-    background-size: 180%;
+    background-position: 0% 10%;
   }
 
   .home-bio {
-    top: 58%;
+    top: 44%;
     left: 70%;
   }
 

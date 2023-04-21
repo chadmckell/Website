@@ -440,9 +440,9 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  line-height: 30px;
-  height: 30px;
-  padding: 0 16px;
+  /* line-height: 30px; */
+  /* height: 30px; */
+  /* padding: 0 16px; */
 }
 
 }
