@@ -373,10 +373,10 @@ p.course-content-mobile3 {
     padding-top: 132.4%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     overflow: hidden;
     width: 325.8%;
-    /* background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat; */
-    /* background-position: 11% 30%; */
-    /* background-size: 14%; */
-    background-color:  rgba(0, 0, 0, 0.14);
+    /* background: url("https://chadmckell.com/images/shores2.jpg") top center no-repeat;
+    background-position: 10% 100%;
+    background-size: 225%; */
+    background-color:  rgba(210, 152, 82, 0.318);
 
 
 
