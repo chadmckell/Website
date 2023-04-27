@@ -70,7 +70,7 @@
 }
 
 /* For devices larger than 1150px */
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .container {
     width: 80%; }
   .container-wide {
