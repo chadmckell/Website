@@ -474,19 +474,6 @@ p.course-content-mobile3 {
     background-size: 180%;
     top: 61px;
   }
-}
-
-
-@media only screen and (max-width: 899px){
-
-  .parent {
-    width: 100%;
-    padding-top: 45%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    /* background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat; */
-    background-position: 0% 10%;
-    background-size: 180%;
-    top: 61px;
-  }
 
   .home-bio {
     top: 44%;
@@ -503,6 +490,19 @@ p.course-content-mobile3 {
 
   p.course-content-mobile3 {
     display: none;
+  }
+}
+
+
+@media only screen and (max-width: 899px){
+
+  .parent {
+    width: 100%;
+    padding-top: 45%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    /* background: url("https://chadmckell.com/images/me_circle.png") top center no-repeat; */
+    background-position: 0% 10%;
+    background-size: 180%;
+    top: 61px;
   }
 
 
