@@ -24,7 +24,7 @@
   <!-- FONT -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" /
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" >
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/custom.css">
@@ -34,6 +34,10 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="images/fairy2.jpg">
+
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
 
 
   <!-- reference for putting images side by side https://www.w3schools.com/howto/howto_css_images_side_by_side.asp -->
@@ -118,13 +122,20 @@
       <h5><b>Overview</b></h5>
 
       <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
-      My research covers mathematical modeling and numerical simulation of physical systems. I am especially interested in 
+      My research covers mathematical modeling and numerical simulation of acoustic systems. I am especially interested in 
+      computational geometric methods for acoustic simulation. Current research topics include mathematical modeling of 
+      geometrically complex boundaries in acoustic wave propagation simulations; modeling of geometrically complex sound 
+      sources for applications in computer animation; and variational methods for simulating fluid-structure interactions 
+      in musical instruments and the human cochlea. My research provides tools for scientific validation, data generation 
+      for machine learning, device prototyping, and physics engine development.
+          <!-- 
+
+            My research covers mathematical modeling and numerical simulation of physical systems. I am especially interested in 
       differential geometry and its applications in computational acoustics and computer 
       graphics. Current research topics include differential geometric methods 
       for handling boundaries in acoustic wave simulations and variational methods for simulating fluid-structure 
       interactions in musical instruments, computer graphics scenes, and the human cochlea. My research provides tools for 
       scientific validation, data generation for machine learning, device prototyping, and physics engine development.
-          <!-- 
 
             differential geometric methods for physical simulation and their applications in ...
 
@@ -139,7 +150,7 @@
           <!-- <a href="https://www.razer.com/gaming-headsets/razer-nari-ultimate/" target="_blank">Razer Nari Ultimate</a> -->
 
           <br><br>
-          <h5><b>Geometric Methods for Acoustic Wave Simulations</b></h5>
+          <h5><b>Acoustic Wave Propagation Simulations</b></h5>
 
       <!-- <a href="virtual_acoustics"><h5><b>Virtual Acoustics</b></h5></a> -->
       <!--<a href="animation"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
@@ -171,19 +182,50 @@
       <br><br><br>
       <!-- <hr> -->
 
+
+
+
+
+
+
+
+<h5><b>Modeling Sound Sources with Complex Geometries</b></h5>
+<!--<a href="animation"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+<!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
+
+<div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Below is an image of four of the harmonic modes of the Stanford 
+  bunny. From left to right, I've plotted the \(0^{th}\), \(1^{st}\), \(2^{nd}\), and \(6^{th}\) modes. I computed the 
+  displacement of each mode by numerically solving the Helmholtz equation at every vertex on 
+  the triangulated surface. The purple portions represent regions where the displacement is maximally negative, and the red portions 
+  represent where it is maximally positive. The computation was performed using VEX and Python, and the graphics were rendered 
+  using Houdini. (Note: if the bunnies were replaced by spheres, the eigenvectors would be the corresponding real spherical 
+  harmonics). I am interested in using this computational methodology to synthesize sounds emitted by complex geometries and synchronize 
+  them with interactive computer graphics. 
+</font></div>
+
+
+<br>
+
+<img style="width:100%;" src="images/bunnies.jpeg">
+<br><br><br>
+
+
+
+
+
+
       <!-- <h5><b>Physical Simulation of Fluid-Structure Interactions</b></h5> -->
       <!-- <h5><b>Physical Simulation of Sound Sources</b></h5> -->
       <!-- <h5><b>Physical Simulation of Fluid-Structure Interactions</b></h5> -->
-        <h5><b>Physical Simulation of Musical Instruments, Ears, and Fluids</b></h5>
+        <h5><b>Physical Simulation of Musical Instruments and the Human Cochlea</b></h5>
         <!--<a href="animation"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
         <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Physical simulation is the computational emulation of natural phenomena using 
-        physics-based models. Physical simulation is useful for producing very accurate emulations, 
-        offering intuitive user control of modeling parameters, and synchronizing sound synthesis with interactive computer graphics. 
-        I am interested in using variational methods to simulate fluid-structure interactions in musical instruments, 
-        computer graphics scenes, and the human cochlea. Key applications areas include musical instrument design, computer animation, and 
-        hearing device development.</font></div>
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Physical simulation is the computational 
+          emulation of natural phenomena using physics-based models. Physical simulation is useful for producing 
+          very accurate emulations and offering intuitive user control of modeling parameters. I am interested in 
+          using variational methods to simulate fluid-structure interactions in musical instruments and the human 
+          cochlea. Key applications areas include musical instrument design and hearing device development.</font></div>
 
         <!-- 
 
@@ -365,9 +407,12 @@
         -->
 
 
-      </div>
-    <!--</div>-->
+
+
+
 </div>
+</div>
+
 
 
  <!--
