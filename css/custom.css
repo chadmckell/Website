@@ -409,6 +409,7 @@ p.course-content-mobile3 {
   top: 52%;
   left: 16.6%;
   transform: translate(-50%, -50%);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .home-bio-pic {
