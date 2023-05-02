@@ -249,6 +249,14 @@ p.right-cell2 {
   font-size: 16px;
 }
 
+p.right-cell3 {
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
 p.content {
   margin-left: 10px;
   margin-right: 30px;
@@ -510,6 +518,10 @@ p.course-content-mobile3 {
   p.right-cell2 {
     font-size: 14px;
   }
+
+  p.right-cell3 {
+    font-size: 16px;
+  }
   
 
 }
@@ -573,6 +585,13 @@ p.course-content-mobile3 {
   }
 
   p.right-cell2 {
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  p.right-cell3 {
     margin-left: 10px;
     margin-right: 20px;
     margin-top: 10px;
@@ -735,6 +754,13 @@ p.course-content-mobile3 {
   }
 
   p.right-cell2 {
+    margin-left: 10px;
+    margin-right: 22px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  p.right-cell3 {
     margin-left: 10px;
     margin-right: 22px;
     margin-top: 0px;
