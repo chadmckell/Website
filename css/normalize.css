@@ -427,6 +427,9 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  -moz-box-shadow: 0 0 3px #797878;
+  -webkit-box-shadow: 0 0 3px#797878;
+  box-shadow: 0 0 3px #797878;
 }
 
 td,
