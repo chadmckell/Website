@@ -124,7 +124,7 @@
       <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
       My research covers mathematical modeling and numerical simulation of acoustic systems. I am especially 
       interested in modeling and simulation methods emerging from differential geometry, such as structure-preserving 
-      transformations, variational principles, and differential forms. Current projects include 
+      transformations, differential forms, and variational principles. Current projects include 
       boundary modeling for acoustic wave simulations; sound source modeling for computer animation; 
       and physical simulation of wind instruments and the human cochlea. My research integrates knowledge and 
       practices from multiple academic disciplines, including physics, computer science, and biology, and 
@@ -196,11 +196,12 @@
         using Kelvin transforms to flatten curved obstacle boundaries. Key application areas include architectural 
         planning for outdoor sound environments, artificial reverberation tools for musicians, and binaural audio technology. -->
         
-        I have developed differential geometric methods for handling boundaries in wave propagation simulations, including 
+        I have developed differential geometric methods for handling boundaries in acoustic wave propagation simulations, including 
         a wave-equation solver for infinite spacetime domains and an absorbing boundary layer treatment. A promising 
         future direction of my research in this area involves developing boundary flattening methods for curved obstacles.
-        Application areas include architectural acoustics, artificial reverberation, hearing devices, and binaural 
-        audio technology.
+        A common theme in this work is the discovery of structure-preserving transformations for wave propagation, an approach 
+        that derives from Felix Klein's Erlangen program. Application areas include architectural acoustics, artificial 
+        reverberation, hearing devices, and binaural audio technology.
         <!--
 
           artificial reverberation tools for musicians
@@ -237,7 +238,9 @@
   bunny mesh. From left to right, I've plotted the \(0^{th}\), \(1^{st}\), \(2^{nd}\), and \(6^{th}\) modes. In my methodology, I compute the 
   displacement of each mode by numerically solving the Helmholtz equation at every vertex on 
   the triangulated mesh. The purple portions represent regions where the displacement is maximally negative, and the red portions 
-  represent where it is maximally positive. I am interested in using my computational methodology to synthesize sounds emitted by complex 
+  represent where it is maximally positive. Notably, the governing model is expressed using coordinate-free differential forms, which allow one to 
+  more easily simulate physics on arbitrary geometries. I am interested 
+  in using my methodology to synthesize sounds emitted by complex 
   geometries and synchronize them with interactive physics-based computer animations. 
 </font></div>
 
@@ -263,7 +266,7 @@
           emulation of natural phenomena using physics-based models. Physical simulation is useful for producing 
           very accurate emulations and offering intuitive user control of modeling parameters. In my research, I have 
           developed physics-based modal synthesis and finite-difference time-domain simulations of musical instruments 
-          and human speech. Currently, I am interested in using variational methods to simulate fluid-structure 
+          and human speech. Currently, I am interested in using a variational principle to simulate fluid-structure 
           interactions in wind instruments and the human cochlea. Application areas include musical instrument design, 
           speech therapy, and hearing devices.</font></div>
 
