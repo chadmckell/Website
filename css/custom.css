@@ -484,7 +484,7 @@ p.course-content-mobile3 {
 
 
 
-@media only screen and (max-width: 899.9px){
+@media only screen and (max-width: 949.9px){
 
   .parent {
     width: 100%;
@@ -784,12 +784,6 @@ p.course-content-mobile3 {
     width: 100%;
   }
 
-  
-}
-
-
-@media only screen and (max-width: 450px) {
-
   table, thead, tbody, th, td, tr { 
     display: block;
   }
@@ -1036,7 +1030,8 @@ liable for any loss or damage of any kind during the usage of provided code. */
 
 /* 48em = 768px */
 
-@media (min-width: 58em) {
+@media (min-width: 950px) {
+/* @media (min-width: 58em) { */
   .header li {
     float: left;
     line-height: 20px;
