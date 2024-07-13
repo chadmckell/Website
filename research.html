@@ -314,22 +314,39 @@
       <!--<a href="instruments.html"><h5><b>Sound Synthesis for Computer Animation</b></h5></a>-->
 
       <div style="LINE-HEIGHT:18px; text-align:left">
-        <font color="#686A6C">Physical simulation is the computational
-          emulation of natural phenomena using physics-based models. Physical simulation is useful for producing
-          very accurate emulations, offering intuitive user control of modeling parameters, and validating 
-          experimental measurements. In the past, I have used physics-based methods to simulate elastic wave dynamics in musical instrument components, 
-          including stiff strings and thin plates. Currently, I am interested in using a physics-based approach to simulate 
-          hydroelastic waves in the human cochlea. Of particular interest is the use of geometric variational principles to 
-          simplify the fluid-solid coupling between the perilymph and the basilar membrane. For the initial phase of research, I am 
-          building foundational elastic and fluid simulations using arbitrary geometries. The next phase of the project is 
+        <font color="#686A6C">Variational principles are methods for deriving physical models that work by finding functions which optimize 
+          physical quantities. The physical quantity could be an energy or an action of a system that depends on the optimizing function. A typical approach for finding such functions is to minimize 
+          a so-called Lagrangian, which for many systems is equal to the difference between the kinetic and potential energies of the system. Currently, I am 
+          developing general 3D elastic simulations based on physical models derived using the first Piola-Kirchoff stress tensor 
+          and its corresponding Lagrangian. The next phase of the project is 
           to simulate passive surface waves in an elastic membrane with homogeneous fluid chambers above and below the membrane.
-          Besides direct applications in musical instrument design and auditory biophysics, other potential application areas 
-          of my research in elastic wave simulation include psychoacoustics, music cognition, seismology, ultrasound technology, and otology. 
+          Of particular interest is the use of geometric variational principles to 
+          simplify models of fluid-solid coupling in the inner ear.
+          Besides auditory biophysics, my research may also have applications in structural engineering, 
+          psychoacoustics, music cognition, seismology, ultrasound technology, and otology. 
           Image caption (left to right): elastic deformation of a 3D geometry, fluid flow in a 2D plane, (next two images) longitudinal section of the 
           human cochlea and section of the organ of Corti (Gray's Anatomy, 1918). </font>
       </div>
 
       <!-- 
+
+      Of particular interest in my research is the use of geometric variational principles to 
+          simplify models of fluid-solid coupling in the inner ear, specifically the coupling between the perilymph and the basilar membrane of the human cochlea.
+          
+
+      For the initial phase of research, I am 
+          building foundational elastic and fluid simulations using arbitrary geometries.
+
+      Unlike the well-known Cauchy stress tensor from linear elasticity, the PK1 stress tensor
+          can be used to model both small and large deformations in elastic bodies, such as high-amplitude plate vibrations or aeroelastic flutter. 
+
+      In the past, I have simulated elastic wave dynamics in musical instrument components, 
+          including stiff strings and thin plates.
+
+      Physical simulation is the computational
+          emulation of natural phenomena using physics-based models. Physical simulation is useful for producing
+          very accurate emulations, offering intuitive user control of modeling parameters, and validating 
+          experimental measurements.
 
           In the past, I have
           developed physics-based modal synthesis and finite-difference time-domain simulations of musical instruments
