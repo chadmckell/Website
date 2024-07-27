@@ -33,22 +33,60 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="images/fairy2.jpg">
 
+  <style>
+    body {
+  padding-left: 10%;
+  padding-right: 10%;
+  background: #f4f4f4;
+}
+ @media (max-width: 650px) { 
+  body{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+    } 
+
+    .div-author {
+      padding-top: 0.5%;
+      padding-bottom: 0.5%;
+      background-color: rgba(124, 108, 46, 0.845);
+    }
+
+  
+
+  a {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+  } 
+
+  a:hover {
+    color: #ffffff; }
+
+  @media (max-width: 950px) { 
+    a {
+      font-size: 16px;
+    }
+  }
+  
+
+  </style>
 </head>
+
+
 <body>
 
 
-  <header class="header">
+  <!-- <header class="header">
     <a href="index" class="logo">CHAD MCKELL</a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
       <li><a href="research">Research</a></li>
       <li><a href="publications">Publications</a></li>
-      <!-- <li><a href="portfolio">Portfolio</a></li> -->
       <li><a href="teaching">Teaching</a></li>
       <li><a href="about">About</a></li>
     </ul>
-  </header>
+  </header> -->
   
 
   <!-- <header>
@@ -71,28 +109,33 @@
 	  <img style="width:100%;" id="image" src="images/ocean3_cropped.jpg">
   </div> -->
 
-  <br><br><br>
-  
-  <div class="section">
-    <div class="container">
-    
-  <br>
-  <center>
-  <h3><b>Sonification of Optically-Ordered Brownian Motion</b></h3>
-    <!-- <h3><b>Compositional Algorithms</b></h3> -->
-  </center>
 
-    <p> 
-      <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
-        <center>
+  
+  <div class="section2">
+    <div class="container-extrawide">
+    
+  <br><br>
+  <center>
+    <h3><b><font color="#927400">Sonification of Optically-Ordered Brownian Motion</font></b></h3>
+
+
+    <h4>
+    <font color="#927400">ICMC 2016</font>
+    </h4>
+ 
+      <div class="div-author"><font color="white" >
         <a href="https://chadmckell.com">Chad McKell</a>
-        <br>
-        Wake Forest University
-      </center>
+       </center>
   </font></div>
-</p>
+<br>
 
 <center>
+  <img style="width:100%;" src="images/sonification_montage.png">
+</center>
+</div>
+</div>
+
+<!-- <center>
 <p class="course-content">
   <video style="width:50.0%" playsinline autoplay muted loop>
     <source src="video/particle_smaller.mp4" type="video/mp4">
@@ -102,25 +145,48 @@
 
 <center>
 <p class="course-content-mobile">
-  <video style="width:100.0%" playsinline autoplay muted loop>
+  <video style="width:90.0%" playsinline autoplay muted loop>
     <source src="video/particle_smaller.mp4" type="video/mp4">
   </video>
 </p>
-</center>
-
-
-<br>
+</center> -->
 
 
 
 
+
+
+<div class="section3">
+  <div class="container-wide">
       <!-- <h5><b>Stochastic Sonification</b></h5> -->
-      <h5><b>Summary and Paper</b></h5>
+      <br>
+      <h5><b><font color="#927400">Abstract</font></b></h5>
       <p> 
-        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">Inspired by Iannis Xenakis' 1956 work <i>Pithoprakta</i>, I used a 
-          modern laser trapping setup to track Brownian particles and sonify their motion. I built the optics setup as part of my master's 
-          <a href="https://wakespace.lib.wfu.edu/handle/10339/57431" target="_blank">thesis</a> in Physics at Wake Forest University. I 
-          sonified the position data of single, optically-trapped Brownian microspheres (like the one shown above) 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
+          In this paper, a method is outlined for the sonification of
+experimentally-observed Brownian motion organized into
+optical structures. Sounds were modeled after the tracked,
+three-dimensional motion of Brownian microspheres confined in the potential wells of a standing-wave laser trap.
+Stochastic compositions based on freely-diffusing Brownian particles are limited by the indeterminacy of the data
+range and by constraints on the data size and dimensions.
+In this study, these limitations are overcome by using an
+optical trap to restrict the random motion to an ordered
+stack of two-dimensional regions of interest. It is argued
+that the confinement of the particles in the optical lattice
+provides an artistically appealing geometric landscape for
+constructing digital audio effects and musical compositions based on experimental Brownian motion. A discussion of future work on data mapping and computational
+modeling is included. The present study finds relevance in
+the fields of stochastic music and sound design.
+
+        </font></div>
+      </p>
+      <br>
+    
+
+      <h5><b><font color="#927400">Note about Data Mapping</font></b></h5>
+      <p> 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
+          I sonified the position data of single, optically-trapped Brownian microspheres  
           using Pure Data and Ableton Live. Each radial displacement of the sphere was mapped to an audible sound. 
           I used four different mapping schemes&mdash;equal-area, biased, probability, and timbre mapping. In each scheme, the 
           centermost subregion of the mapping region corresponded to a single pure tone. In equal-area mapping, the
@@ -129,27 +195,43 @@
           probability mapping, the note had a 50-50 percent probability of increasing by some integer number of midi note 
           numbers or decreasing by some other integer number of midi note numbers each time the particle entered a new 
           subregion. In timbre mapping, the spectral flux of a triangle wave was controlled by the stochastic motion of the trapped particle.
-          To visualize the equal-area mapping, I made a <a href="https://www.youtube.com/watch?v=XY0IdksIbLQ" target="_blank">video</a> 
-          that synchronizes the sounds to the experimental motion. For more details on this work, see my conference 
-          paper below.
+          To visualize the equal-area mapping, I made a video 
+          that synchronizes the sounds to the experimental motion (see link below). 
+          <!-- For more details on this work, see my conference 
+          paper below. -->
+          <!-- Inspired by Iannis Xenakis' 1956 work <i>Pithoprakta</i>, I used a 
+          modern laser trapping setup to track Brownian particles and sonify their motion. I built the optics setup as part of my master's 
+          thesis in Physics at Wake Forest University.  -->
           <!-- I wrote a conference <a href="/pdf/icmc_2016.pdf" target="_blank">paper</a> that provides more details on the project. -->
       </font></div>
       </p>
+      <br>
 
-      <div style="LINE-HEIGHT:18px; text-align:left">
-        <a href="/pdf/icmc_2016.pdf" target="_blank" class="button">View Paper</a>
-        </div>
-        <br><br>
+      <h5><b><font color="#927400">Acknowledgements</font></b></h5>
+      <p> 
+        <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
 
-        <h5><b>Audio Samples</b></h5>
+          The author would like to thank Keith Bonin for guiding
+the experimental work that inspired this study; Research
+Corporation and Wake Forest University for funding the
+experiments; and David Busath, Justin Peatross, Steve
+Ricks, Christian Asplund, Rodrigo Cadiz, Kurt Werner,
+Nick Sibicky, Adam Brooks, and Katherine McKell for
+discussing ideas and offering feedback about the project.
+        </font></div>
+      </p>
+
+     
+        <br>
+
+        <h5><b><font color="#927400">Links</font></b></h5>
 
 
-        <table align="bleedleft" width="100%" bgcolor="#DBE7EE" style='border-color:#bfcbd1;'> <!--ffecb3">-->
+        <!-- <table align="bleedleft" width="100%" bgcolor="#DBE7EE" style='border-color:#bfcbd1;'> 
           <tbody>
           <tr>
           <td style="text-align:left">
             <p class="left-cell" style="LINE-HEIGHT:22px">
-              <!-- <font size="3"><b><i>Stochastic Sonification</i></b></font></p> -->
               <table style='border:none;'>
                 <tr>
                   <td><p class="left-cell" style="LINE-HEIGHT:22px">Pitch</p></td>
@@ -189,10 +271,16 @@
           </td>
           </tr>
           </tbody>
-          </table>
+          </table> -->
+
+          
 
           <div style="LINE-HEIGHT:18px; text-align:left">
-            <a href="https://brownian.bandcamp.com/album/stochastic-pitch-modulation" target="_blank" class="button">Hear Full Album</a>
+              <a href="/pdf/icmc_2016.pdf" target="_blank" class="button">Paper</a>
+              <br>
+            <a href="https://www.youtube.com/watch?v=XY0IdksIbLQ" target="_blank" class="button">Video</a>
+            <br>
+            <a href="https://brownian.bandcamp.com/album/stochastic-pitch-modulation" target="_blank" class="button">Audio</a>
             </div>
 
 
@@ -228,7 +316,7 @@
 
         <br><br>
 
-        <h5><b>Citation</b></h5>
+        <h5><b><font color="#927400">Citation</font></b></h5>
         <div style="LINE-HEIGHT:18px; text-align:left"><font color="grey">
                <ol>
                  <!-- <li><b>C. McKell</b>. <a href="https://quod.lib.umich.edu/i/icmc/bbp2372.2016.102/1"  target="_blank">Sonification of optically-ordered Brownian motion</a> <a href="/pdf/icmc_2016.pdf"  target="_blank">[pdf]</a>, Proceedings of the International Computer Music Conference (ICMC),  Utrecht, Netherlands, September 2016.</li> -->
@@ -236,6 +324,7 @@
 
                 </ol>
               </font></div>
+              <br><br>
 
     </div>
   </div>
@@ -352,14 +441,13 @@
 
 -->
 
-<br><br>
 
-<div class="footer">
+
+<div class="footer-papers">
   <a href="https://vimeo.com/mckell" target="_blank"><i class="fa fa-vimeo-square" style="font-size:36px"></i></a>
   <a href="https://github.com/chadmckell" target="_blank"><i class="fa fa-github" style="font-size:36px"></i> </a>
   <a href="https://www.linkedin.com/in/chadmckell/" target="_blank"><i class="fa fa-linkedin-square"
       style="font-size:36px"></i></a>
-  <!-- <a href="https://brownian.bandcamp.com/releases" target="_blank"><i class="fa fa-bandcamp" style="font-size:36px"></i></a> -->
   <br> <br>
   <font color="white">Copyright &copy 2009&ndash;2024. Chad McKell. All Rights Reserved.</font>
 </div>
