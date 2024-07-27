@@ -216,12 +216,13 @@ table {
   padding: 40px;
   text-align: center;
   width: 100%;
-  height: 30%;
-  background: linear-gradient( rgba(124, 108, 46, 0.5), rgba(124, 108, 46, 0.5) ), url("https://chadmckell.com/images/shores2.jpg");
+  height: 20%;
+  /* background: linear-gradient( rgba(124, 108, 46, 0.5), rgba(124, 108, 46, 0.5) ), url("https://chadmckell.com/images/shores2.jpg"); */
   /* background-image: url("https://chadmckell.com/images/shores2.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(124, 108, 46, 0.8);
   opacity: 1.0;
 }
 
