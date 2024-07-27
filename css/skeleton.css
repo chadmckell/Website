@@ -45,11 +45,18 @@
     box-sizing: border-box; }
 .container-wide {
       position: relative;
-      width: 100%;
+      width: 85%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 200px;
+      padding: 0 0px;
       box-sizing: border-box; }
+.container-extrawide {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0;
+        }
 .wrapper {
   width: 100%;
   height:100%; }
@@ -65,7 +72,7 @@
     width: 85%;
     padding: 0; }
   .container-wide {
-    width: 85%;
+    width: 90%;
     padding: 0; }  
 }
 
@@ -74,8 +81,8 @@
   .container {
     width: 80%; }
   .container-wide {
-    padding: 0 20px;
-    width: 80%; }
+    padding: 0 0px;
+    width: 90%; }
   .container-narrow {
     padding: 0 20px;
     width: 80%; }
