@@ -188,6 +188,12 @@ table {
   text-align: center;
 }
 
+.section3 {
+  background-color: white;  
+  padding: 0px 0px;
+  text-align: left;
+}
+
 /* Reference for linear gradient: https://stackoverflow.com/questions/26621513/darken-css-background-image */
 .footer {
   /* background-color: rgb(128, 133, 146);   */
@@ -197,6 +203,21 @@ table {
   width: 100%;
   height: 30%;
   background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("https://chadmckell.com/images/shores2.jpg");
+  /* background-image: url("https://chadmckell.com/images/shores2.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.0;
+}
+
+.footer-papers {
+  /* background-color: rgb(128, 133, 146);   */
+  color: #000;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient( rgba(124, 108, 46, 0.5), rgba(124, 108, 46, 0.5) ), url("https://chadmckell.com/images/shores2.jpg");
   /* background-image: url("https://chadmckell.com/images/shores2.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
@@ -566,6 +587,10 @@ p.course-content-mobile3 {
 
   .section2 {
     padding: 0px 0px;
+  }
+
+  .section3 {
+    padding: 2px 2px;
   }
 
 
